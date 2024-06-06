@@ -2,3 +2,8 @@
 {
     padding-left: 25px;
 }
+
+.expansion-no-elements:hover
+{
+    background-color: rgba(0, 0, 0, 0.04);
+}

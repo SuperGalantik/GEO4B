@@ -1,1 +1,317 @@
-<p>water-funzioni works!</p>
+<div class="container" id="funzioni">
+    <h3>3. Funzionalità</h3>
+    <p>
+        Le funzionalità presenti nella release 1.0 di Geo4B Water WEB App saranno 
+        organizzate e descritte per ambito funzionale in modo da permettere 
+        all'utente di individuare in maniera semplice il paragrafo a cui fare riferimento 
+        in ogni momento.
+    </p>
+</div>
+
+<div class="container" id="layout_interfaccia_utente">
+    <h3>3.1 Layout dell'interfaccia utente</h3>
+    <p>
+        Il Client WEB si presenta come mostrato nella seguente immagine, nella quale 
+        si possono immediatamente individuare le sezioni descritte successivamente.
+        <img src="water_funzioni/3-1_Layout_Interfaccia.png" alt="Cap3.1" class="img-fluid">
+        Si possono subito evidenziare le tre sezioni principali che compongono 
+        l'interfaccia utente, che ovviamente ha come spazio dominante quello della 
+        mappa geografica e quindi della rappresentazione degli elementi delle reti 
+        idrica e fognaria geolocalizzati sul territorio:
+    </p>
+    <ul>
+        <li>
+            <strong> MAPPA</strong> <img src="arrow-right.svg" alt="right arrow icon svg"> Come anticipato la mappa è l'elemento più importante del 
+            prodotto, sulla mappa sono presenti anche la <strong> “Overview View”  </strong>, cioè la 
+            sezione in cui è mostrata la zona visualizzata al momento in un contesto 
+            più ampio, e l'indicazione delle coordinate geografiche intercettate dal 
+            puntatore del mouse.
+        </li>
+        <li>
+            <strong> SIDEBAR </strong> <img src="arrow-right.svg" alt="right arrow icon svg"> La sidebar posizionata nella parte sinistra dell'interfaccia 
+            utente permette di accedere alle funzionalità principali del prodotto
+        </li>
+        <li>
+            <strong> BASEMAP </strong> <img src="arrow-right.svg" alt="right arrow icon svg"> La sezione presenta una toolbar che permette di accedere 
+            alle funzionalità di scelta e configurazione della base cartografica
+        </li>
+        <li>
+            <strong> GOOGLE SEARCH</strong> <img src="arrow-right.svg" alt="right arrow icon svg"> La sezione permette di utilizzare la funzionalità di 
+            ricerca indirizzi e/o Point of Interest di Google Maps. 
+        </li>
+    </ul>
+</div>
+
+<div class="container" id="navigazione_mappa" >
+    <h3>3.2 Navigazione sulla mappa</h3>
+    <p>
+        Le funzionalità di navigazione della mappa sono state semplificate al massimo 
+        in modo da avere una rappresentazione il più pulita possibile senza per questo 
+        limitare la User Experience proposta. Si è osservato infatti che nelle 
+        applicazioni più comuni (es. Google Maps) la navigazione avviene utilizzando 
+        esclusivamente il mouse, tasto sx per il PAN e rotellina per lo Zoom-In e Zoom-Out, pertanto si è deciso di adottare esclusivamente questa modalità 
+        operativa. 
+    </p>
+</div>
+
+<div class="container" id="selezione_oggetti">
+    <h3>3.3 Selezione oggetti sulla mappa</h3>
+    <p>
+        Una volta pubblicati ed attivati i livelli sulla mappa, gli stessi possono essere 
+        consultati mediante selezione cliccando con il puntatore del mouse in 
+        prossimità della presenza di un qualsiasi elemento visualizzato.
+        La selezione è attiva solo per i livelli pre-configurati, quali ad esempio quelli 
+        delle reti idrica e fognaria, gestiti nell'Inventory GE Smallworld, e per i livelli
+        caricati da file geografici esterni.
+        La selezione non è attiva per i livelli esterni da servizio perché non vi è uno 
+        standard unico sulla gestione di questi servizi per cui non sempre è possibile 
+        prevedere quale potrebbe essere la modalità corretta per recuperare le 
+        informazioni di dettaglio.
+        Sono naturalmente selezionabili solo gli elementi dei livelli in quel momento 
+        attivi.
+        In seguito al click sulla mappa viene attivato un menù di disambiguazione che 
+        mostra tutti gli elementi dei diversi livelli sottesi al punto cliccato, come 
+        mostrato nella seguente immagine.
+        <img src="water_funzioni/3-3_Seleziona_oggetti_su_mappa.png" alt="Cap3.3" class="img-fluid">
+        Come si potrà leggere nel capitolo riservato alla Roadmap di prodotto, la 
+        modalità operativa qui descritta sarà aggiornata nella release 1.1 in cui verrà 
+        ulteriormente migliorata la User Experience.
+        Dal menù di disambiguazione si può scorrere per selezionare l'elemento 
+        desiderato e successivamente fare il GoTo sulla mappa o aprire la Scheda di 
+        Dettaglio, agendo sugli appositi bottoni.
+        La Scheda di Dettaglio che si apre e che riporta i valori degli attributi 
+        dell'oggetto è mostrata nell'immagine che segue.
+        <img src="water_funzioni/3-3-1_Dettagli_oggetto.png" alt="Cap3.3.1" class="img-fluid">
+    </p>
+</div>
+
+<div class="container" id="selezione_livelli">
+    <h3>3.4 Selezione livelli</h3>
+    <p>
+        Per attivare lo strumento di selezione dei livelli predefiniti è necessario 
+        selezionare il primo bottone dall'alto sulla Sidebar di sinistra. Si aprirà un 
+        menù simile a quello mostrato nella seguente immagine.
+        <img src="water_funzioni/3-4-selezione-livelli.png" alt="Cap3.4" class="img-fluid">
+        Nel menù di Selezione dei Livelli sono elencati tutti i livelli configurati in fase 
+        di setup dell'applicazione che, nel caso di Geo4B Water (Web e Mobile) 
+        rappresentano le diverse reti e/o i diversi dataset gestiti a livello di Inventory 
+        GE Smallworld Core. Naturalmente il prodotto è totalmente configurabile per 
+        cui sarà cura di EBWorld e della struttura tecnica del Cliente concordare i livelli 
+        da configurare in fase di setup.
+        Agendo sul “toggle item” al fianco di ciascun livello sarà possibile accendere 
+        o spegnere il layer e quindi rendere gli elementi del Dataset appartenenti allo 
+        stesso visibili e selezionabili o meno.
+        Agendo sull'icona a destra dell'etichetta del livello (tre puntini verticali) è 
+        possibile attivare il menù con la slidebar attraverso la quale aumentare o 
+        diminuire il livello di opacità degli elementi del layer stesso, così come 
+        mostrato nella seguente immagine.
+        <img src="water_funzioni/3-4-1-opacita-livelli.png" alt="Cap3.4.1" class="img-fluid">
+        In fase di setup dell'applicazione saranno impostate anche le regole di 
+        visibilità dei livelli alle diverse scale di visualizzazione, regole che limiteranno 
+        di conseguenza la possibilità di accendere o meno il livello alle stesse scale.
+    </p>
+</div>
+
+<div class="container" id="layer_agg_servizio">
+    <h3>3.5 Livelli aggiunitvi da servizio</h3>
+    <p>
+        Per attivare lo strumento di selezione dei livelli aggiuntivi da servizio è 
+        necessario selezionare il secondo bottone dall'alto sulla Sidebar di sinistra. Si 
+        aprirà un menù simile a quello mostrato nella seguente immagine.
+        I livelli aggiuntivi da servizio non sono altro che la pubblicazione sul sistema e 
+        quindi in mappa, di livelli informativi provenienti da soggetti che forniscono 
+        pubblicamente servizi di tipo WMS, WMTS, XYZ e Vector. Il cliente ha spesso 
+        l'esigenza di accedere ad informazioni residenti in altri sistemi che fruibili 
+        gratuitamente grazie alla possibilità di accedere a degli Endpoint pubblici. 
+        Questa funzionalità permette quindi di aggiungere e configurare questi nuovi 
+        livelli semplicemente impostando il corretto Endpoint ed elaborando il 
+        servizio complessivo fornito sullo stesso. 
+        <img src="water_funzioni/3-5-aggiunta-livelli-da-servizio.png" alt="Cap3.5" class="img-fluid">
+        Nel menù che si attiva è mostrato l'elenco dei livelli già configurati in 
+        precedenza ed è presente il bottone, <strong>“AGGIUNGI LIVELLO” </strong>che da accesso 
+        allo strumento che permette di agganciare un nuovo servizio esterno, tra 
+        quelli elencati sopra, e pubblicarlo come livello aggiuntivo.
+        Nella seguente immagine è mostrata l'interfaccia che si attiva con la Picklist 
+        che permette di selezionare la tipologia di servizio che si vuole pubblicare.
+        <img src="water_funzioni/3-5-1-aggiunta-livelli-da-servizio.png" alt="Cap3.5.1" class="img-fluid">
+        Selezionando il tipo di servizio e successivamente digitando nella casella di 
+        testo apposita, l'URL del Endpoint sul quale viene pubblicato, il sistema tenta 
+        di accedere, elabora le “capabilties” fornite dal servizio (es. livelli pubblicati, 
+        stili ecc.) ed infine mostra l'interfaccia finale che permette all'utente di 
+        impostare e configurare in completa autonomia il livello aggiuntivo.
+        <img src="water_funzioni/3-5-2-aggiunta-livelli-da-servizio.png" alt="Cap3.5.2" class="img-fluid">
+        È possibile selezionare uno o più livelli tra quelli pubblicati, aggiungere un 
+        Titolo e alte informazioni che permetteranno in seguito di distinguerlo 
+        nell'elenco visto all'inizio del paragrafo. Al termine della procedura, 
+        procedendo con il salvataggio della nuova configurazione, il nuovo livello
+        apparirà nell'elenco e potrà essere attivato/disattivato agendo sull'apposito 
+        toggle_item.
+    </p>
+</div>
+
+<div class="container" id="layer_agg_file">
+    <h3>3.6 Livelli aggiuntivi da file</h3>
+    <p>
+        La funzionalità permette, in modo analogo a quella descritta nel paragrafo 
+        precedente, di aggiungere e pubblicare sull'applicazione dei livelli esterni da 
+        file geografici. Nella release 1.0 i formati che è possibile importare sul sistema 
+        sono lo Shape e il CSV (per oggetti puntuali), nella quale struttura devono 
+        essere presenti le due colonne che memorizzano i dati della coordinata. 
+        Nell'attuale release lo strumento è limitato al caricamento di file di medie e 
+        piccole dimensioni affinché il processo non interferisca con i limiti di Time-Out imposti dagli applicativi WEB.
+        In continuità con la UX degli altri strumenti, si accede alla funzionalità 
+        mediante il terzo bottone dall'alto della Sidebar, che attiva l'interfaccia 
+        mostrata nella seguente immagine.
+        <img src="water_funzioni/3-6-aggiungi-livello-da-file.png" alt="Cap3.6" class="img-fluid">
+        La logica di funzionamento è comune alla funzionalità precedente, sono 
+        mostrati gli eventuali livelli precedentemente caricati e configurati ed è 
+        presente il bottone che da la possibilità all'utente di aggiungerne di nuovi. 
+        La modalità di gestione dei nuovi livelli aggiunti, comune ad altre funzionalità 
+        presenti nel prodotto e descritte nei paragrafi seguenti, cambierà a seconda 
+        del profilo utente. Infatti di default i livelli aggiuntivi saranno PRIVATI, cioè 
+        visibili solo all'utente che li ha caricati e configurati. Alcuni profili utente, di 
+        più alto livello, avranno la possibilità di caricare i livelli aggiuntivi come 
+        PUBBLICI, in questo caso il livello e i dati in esso contenuti e pubblicati saranno 
+        accessibili dalle sessioni di tutti gli utenti registrati nel sistema. 
+        In corrispondenza di ciascun livello caricato, alla destra dell'etichetta che lo 
+        descrive, è presente una toolbar con tre bottoni che attivano altrettanti 
+        menù/interfacce:
+    </p>
+    <ul>
+        <li>
+            Info <img src="arrow-right.svg" alt="right arrow icon svg"> Il bottone di info, attiva una scheda in cui sono sintetizzate le 
+            informazioni associate al singolo livello, quali il nome del file, il nome del 
+            livello, il nome dello stile di rappresentazione ecc.
+        </li>
+        <li>
+            Legend <img src="arrow-right.svg" alt="right arrow icon svg"> Il bottone attiva un popup in cui è mostrato lo stile di 
+            rappresentazione configurato per il livello in oggetto.
+        </li>
+        <li>
+            Toolbox <img src="arrow-right.svg" alt="right arrow icon svg"> Il bottone con i tre puntini verticali attiva un sotto-menù che 
+            permette di modificare il livello, di eliminarlo e di modificarne il livello di 
+            opacità con cui viene rappresentato in mappa.
+        </li>
+    </ul>
+    <p>
+        Con il bottone “AGGIUNGI” si attiva l'interfaccia che permette di aggiungere 
+        un nuovo livello eseguendo l'upload di un nuovo file geografico. Tale 
+        interfaccia si presenta come nell'immagine che segue
+        <img src="water_funzioni/3-6-1-aggiungi-livello-da-file.png" alt="Cap3.6.1" class="img-fluid">
+        L'interfaccia permette di assegnare un nome al livello, di assegnare lo stile di 
+        rappresentazione da una Picklist di stili predefiniti, il sistema di coordinate del 
+        dato di origine da una Picklist con l'elenco degli SR (EPSGXXXX) 
+        comunemente utilizzati nel territorio italiano, un campo note nel quale 
+        annotarsi delle peculiarità e, naturalmente, lo strumento per selezionare il file 
+        da uploadare nel sistema.
+        Al termine del caricamento, con il bottone “SALVA” si consolida l'operazione 
+        e il livello appare nella lista tra quelli pubblicati.
+    </p>
+</div>
+
+<div class="container" id="viste">
+    <h3>3.7 Le mie viste</h3>
+    <p>
+        Per attivare lo strumento di gestione dei Bookmark è necessario selezionare il 
+        quarto bottone dall'alto sulla Sidebar di sinistra. Si aprirà un menù simile a 
+        quello mostrato nella seguente immagine.
+        <img src="water_funzioni/3-7-le-mie-viste.png" alt="Cap3.7" class="img-fluid">
+        Un Bookmark è una <i>“fotografia”</i> della situazione a livello di area visualizzata in 
+        mappa e a livello di livelli attivi nel momento in cui viene creato e salvato. In 
+        funzione del profilo utente il Bookmark può essere creato come PRIVATO o 
+        come PUBBLICO e così come per i livelli aggiuntivi nel primo caso sarà 
+        elencato solo nella lista dell'utente che lo ha creato e nel secondo sarà 
+        accessibile a tutti.
+        Su ogni Bookmark registrato è possibile eseguire il posizionamento, 
+        selezionando il bottone <i> “mirino”</i> a destra dell'etichetta, oppure modificarlo o 
+        eliminarlo dal menù a tendina che si attiva con il bottone <i>“tre puntini verticali”</i>.
+    </p>
+</div>
+
+<div class="container" id="query">
+    <h3>3.8 Le mie query</h3>
+    <p>
+        Per attivare lo strumento di gestione delle Query è necessario selezionare il 
+        quinto bottone dall'alto sulla Sidebar di sinistra.
+        Lo strumento offre due opportunità, quella di creare attraverso un 
+        meccanismo a Wizard una query complessa che acceda a dati dei livelli preconfigurati e ai dati dei livelli da file esterno, andando ad impostare gli 
+        opportuni filtri sugli attributi alfanumerici e geometrici, e quella di salvare le 
+        ricerche in modo da poter rieseguire le stesse query a distanza di tempo.
+        Così come per gli altri strumenti, anche per questo è prevista l'opportunità di 
+        salvare le query come PUBBLICHE o PRIVATE, con le stesse modalità operative.
+        Attivando la funzionalità, lo strumento appare come nell'immagine seguente
+        <img src="water_funzioni/3-8-le-mie-query.png" alt="Cap3.8" class="img-fluid">
+        Sottolineando di nuovo che l'elenco che ogni utente visualizzerà dipendere 
+        dalla natura delle query (Pubblica, Privata), dall'elenco si potrà eseguire la 
+        query, modificarla o eliminarla.
+        Selezionando il bottone <i> “run”</i>, la query viene nuovamente eseguita e i risultati 
+        sono mostrati nell'immagine che segue.
+        <img src="water_funzioni/3-8-1-le-mie-query.png" alt="Cap3.8.1" class="img-fluid">
+        Quando si va ad eseguire nuovamente un query, oltre all'elenco dei risultati, 
+        vengono anche ripristinate le condizioni con cui è stata costruita la ricerca, 
+        compresi eventuali constraint geografici(es. poligonali) mostrate sula mappa.
+        Dall'elenco dei risultati è possibile fare il posizionamento su mappa agendo 
+        sull'apposito bottone a fianco del singolo record, ed eseguire anche l'export 
+        dei risultati, limitato agli elementi visualizzati per pagina, il cui numero è 
+        impostato agendo su “Elementi per pagina”, nei formati PDF, CSV e XLS.
+        La User Experience dello strumento verrà pesantemente modificata e 
+        migliorata nelle release successive così come descritto nel paragrafo 
+        dedicato alla Roadmap di Prodotto.
+        Lo strumento oltre a dare accesso a query precedentemente configurate e 
+        salvate fornisce lo strumento (Wizard) per crearne di nuove, con una modalità 
+        operativa mostrata nella seguente immagine.
+        <img src="water_funzioni/3-8-2-le-mie-query.png" alt="Cap3.8.2" class="img-fluid">
+        Lo strumento di Query Wizard, di cui è presentata una preview di sintesi 
+        nell'immagine sopra, prevede la modalità operativa descritta a grandi linee qui 
+        di seguito.
+    </p>
+    <ul>
+        <li>
+            L'utente abilitato può decidere se rendere la query PUBBLICA o 
+            PRIVATA, agendo sul toggle item in testa all'interfaccia
+        </li>
+        <li>
+            Ad ogni query va assegnata una etichetta che la distinguerà dalle altre 
+            nel momento in cui l'utente decida di salvarla e consolidarla.
+        </li>
+        <li>
+            La query viene poi costruita selezionando il livello sui cui dati eseguire 
+            la ricerca, la tabella/collection appartenente al livello, e 
+            successivamente componendo il filtro sulla base dei valori degli 
+            attributi alfanumerici e/o geometrici.
+        </li>
+        <li>
+            Le opzioni di filtro, naturalmente, possono prevedere opzioni multiple.
+        </li>
+        <li>
+            Nel caso in cui uno dei filtri sia geometrico (es. gli elementi contenuti 
+            all'interno di un poligono), si attiverà un Tool di Disegno necessario a 
+            delimitare sulla mappa l'area di ricerca. 
+        </li>
+        <li>
+            Una volta completata l'impostazione dei filtri di ricerca, la query può 
+            essere salvata e successivamente eseguita.
+        </li>
+    </ul>
+</div>
+
+<div class="container" id="cartografia_di_fondo">
+    <h3>3.9 Gestione cartografia di sfondo</h3>
+    <p>
+        La toolbar posizionata in basso a destra permette di accedere agli strumenti 
+        di selezione e gestione della cartografia di sfondo, che nella release 1.0 
+        prevede la possibilità di utilizzare la cartografia di Open Street Map o i diversi 
+        livelli forniti da Google Maps.
+        È possibile selezionare quale sfondo utilizzare da una Picklist come mostrato 
+        in seguito.
+        <img src="3-9-gestione-cartografica.png" alt="Cap3.9" class="img-fluid">
+        Nell'immagine è mostrato l'aspetto della mappa selezionando il livello 
+        “Google satellite”.
+        Il bottone “rotellina dentata” a sinistra della picklist da accesso allo strumento 
+        che permette di impostare sia il livello di opacità sia il livello a Toni di Grigio 
+        della cartografia di sfondo mostrata, feature molto comoda nel caso in cui si 
+        voglia dare risalto ai livelli di rete senza comunque spegnere la Basemap.
+        Un esempio è mostrato nella seguente immagine
+        <img src="3-9-1-gestione-cartografica.png" alt="Cap3.9." class="img-fluid">
+    </p>
+</div>
