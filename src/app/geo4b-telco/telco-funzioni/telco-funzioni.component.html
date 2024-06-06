@@ -1,0 +1,414 @@
+
+<div class="container">
+    <h3>3 FUNZIONALITÁ</h3>
+    <p> 
+        Le funzionalità presenti nella release 1.0 di Geo4B Telco WEB saranno 
+        organizzate e descritte per ambito funzionale in modo da permettere all'utente 
+        di individuare in maniera semplice il paragrafo a cui fare riferimento in ogni 
+        momento.
+    </p>
+</div>
+<div class="container" id="layout_interfaccia_utente">
+    <h3>3.1 Layout dell'interfaccia utente</h3>
+    <p>
+        Il Client WEB si presenta come mostrato nella seguente immagine, nella quale 
+        si possono immediatamente individuare le sezioni descritte successivamente.
+        <img src="telco_funzioni/capitolo_3_1_google_search.png" alt="Cap3.1" class="img-fluid">
+        Si possono subito evidenziare le tre sezioni principali che compongono 
+        l'interfaccia utente, che ovviamente ha come spazio dominante quello della 
+        mappa geografica e quindi della rappresentazione degli elementi delle reti 
+        civile e ottica geolocalizzati sul territorio:
+    </p>
+    <ul>
+        <li>
+            <strong> MAPPA </strong>
+            <img src="arrow-right.svg" alt="right arrow icon svg"> Come anticipato la mappa è l'elemento più importante del 
+            prodotto, sulla mappa sono presenti anche la <strong>“Overview View”</strong>, cioè la 
+            sezione in cui è mostrata la zona visualizzata al momento in un contesto più 
+            ampio, e l'indicazione delle coordinate geografiche intercettate dal 
+            puntatore del mouse.
+        </li>
+        <li>
+            <strong>SIDEBAR </strong><img src="arrow-right.svg" alt="right arrow icon svg"> La sidebar posizionata nella parte sinistra dell'interfaccia utente 
+            permette di accedere alle funzionalità principali del prodotto.
+        </li>
+        <li>
+            <strong>BASEMAP </strong><img src="arrow-right.svg" alt="right arrow icon svg"> La sezione presenta una toolbar che permette di accedere alle 
+            funzionalità di scelta e configurazione della base cartografica.
+        </li>
+        <li>
+            <strong> GOOGLE SEARCH </strong><img src="arrow-right.svg" alt="right arrow icon svg"> La sezione permette di utilizzare la funzionalità di 
+            ricerca indirizzi e/o Point of Interest di Google Maps selezionando il primo 
+            bottone a goccia del componente o la funzionalità di ricerca asset con autocompletamento 
+            (bottone a forma torre di dischi) che, utilizzando il motore 
+            Apache SOLR permette di ricercare tra i record memorizzati nel Data Base 
+            Spaziale della Piattaforma.
+        </li>
+    </ul>
+</div>
+<div class="container" id="navigazione_della_mappa">
+    <h3>3.2 Navigazione della mappa</h3>
+    <p>
+        Le funzionalità di navigazione della mappa sono state semplificate al massimo 
+        in modo da avere una rappresentazione il più pulita possibile senza per questo 
+        limitare la User Experience proposta. Si è osservato, infatti, che nelle 
+        applicazioni più comuni (es. Google Maps) la navigazione avviene utilizzando 
+        esclusivamente il mouse, tasto sx per il <strong> PAN </strong> e rotellina per lo <strong> Zoom-In e Zoom-Out </strong>, pertanto si è deciso di adottare esclusivamente questa modalità 
+        operativa.
+    </p>
+</div>
+<div class="container" id="selezione_oggetti_sulla_mappa">
+    <h3>3.3 Selezione oggetti sulla mappa</h3>
+    <p>
+        Una volta pubblicati ed attivati i livelli sulla mappa, gli stessi possono essere 
+        consultati mediante selezione cliccando con il puntatore del mouse in 
+        prossimità della presenza di un qualsiasi elemento visualizzato.
+        La selezione è attiva solo per i <strong> livelli pre-configurati </strong>, quali ad esempio quelli 
+        delle reti civile e ottica, gestiti nell'Inventory GE Smallworld, e per <strong> i livelli 
+        caricati da file geografici esterni. </strong>
+        La selezione non è attiva per i livelli esterni da servizio perché non vi è uno 
+        standard unico sulla gestione di questi servizi per cui non sempre è possibile 
+        prevedere quale potrebbe essere la modalità corretta per recuperare le 
+        informazioni di dettaglio.
+        Sono naturalmente selezionabili solo gli elementi dei livelli in quel momento 
+        attivi.
+        In seguito al click sulla mappa viene attivato un menù di disambiguazione che 
+        mostra tutti gli elementi dei diversi livelli sottesi al punto cliccato, come 
+        mostrato nella seguente immagine.
+        <img src="telco_funzioni/disambiguazione.png" alt="Cap3.3" class="img-fluid">
+        Come si potrà leggere nel capitolo riservato alla Roadmap di prodotto, la 
+        modalità operativa qui descritta sarà aggiornata nella release 1.1 in cui verrà 
+        ulteriormente migliorata la User Experience.
+        Dal menù di disambiguazione si può scorrere per selezionare l'elemento 
+        desiderato e successivamente fare il <strong> GoTo sulla mappa </strong> o aprire la Scheda di 
+        Dettaglio, agendo sugli appositi bottoni.
+        La Scheda di Dettaglio che si apre, e che riporta i valori degli attributi 
+        dell'oggetto, è mostrata nell'immagine che segue.
+        <img src="telco_funzioni/scheda_dettaglio.png" alt="Cap3.3.1" class="img-fluid">
+    </p>
+</div>
+<div id="selezione_livelli" class="container" >
+    <h3>3.4 Selezione livelli</h3>
+    <p>
+        Per attivare lo strumento di selezione dei livelli predefiniti è necessario 
+        selezionare <strong> il primo bottone dall'alto sulla Sidebar di sinistra.</strong> Si aprirà un menù 
+        simile a quello mostrato nella seguente immagine.
+        <img src="telco_funzioni/visibilita_livello.png" alt="Cap3.4" class="img-fluid" >
+        Nel menù di <strong>Selezione dei Livelli</strong>  sono elencati tutti i livelli configurati in fase di 
+        setup dell'applicazione che, nel caso di Geo4B Telco (Web e Mobile) 
+        rappresentano le diverse reti e/o i diversi dataset gestiti a livello di Inventory 
+        GE Smallworld Core. Naturalmente il prodotto è totalmente configurabile per 
+        cui sarà cura di EBWorld e della struttura tecnica del Cliente concordare i livelli 
+        da configurare in fase di setup.
+        Agendo sul <strong> “toggle item” </strong>al fianco di ciascun livello sarà possibile accendere o 
+        spegnere il livello e quindi rendere gli elementi del dataset appartenenti allo 
+        stesso visibili e selezionabili o meno.
+        Agendo sull'icona a destra dell'etichetta del livello (tre puntini verticali) è 
+        possibile attivare il menù con la slidebar attraverso la quale aumentare o 
+        diminuire il livello di opacità degli elementi del livello stesso, così come 
+        mostrato nella seguente immagine.
+        <img src="telco_funzioni/visibilita_livello_opacita.png" alt="Cap3.4.1"class="img-fluid" >
+        In fase di setup dell'applicazione saranno impostate anche le regole di visibilità 
+        dei livelli alle diverse scale di visualizzazione, regole che limiteranno di 
+        conseguenza la possibilità di accendere o meno il livello alle stesse scale. Ad 
+        esempio se un Layer è stato impostato come non visibile ad una certa scala, il 
+        toggle item relativo sarà disabilitato a quella stessa scala in modo che l'utente 
+        abbia evidenza dell'impossibilità di “accenderlo”.
+    </p>
+</div>
+
+<div id="livelli_aggiuntivi_da_servizio" class="container">
+    <h3>3.5 Livelli aggiuntivi da servizio</h3>
+    <p>
+        Per attivare lo strumento di selezione dei livelli aggiuntivi da servizio è 
+        necessario selezionare il secondo bottone dall'alto sulla Sidebar di sinistra. Si 
+        aprirà un menù simile a quello mostrato nella seguente immagine.
+        I livelli aggiuntivi da servizio non sono altro che la pubblicazione sul sistema e 
+        quindi in mappa, di livello informativi provenienti da soggetti che forniscono 
+        pubblicamente servizi di tipo <strong> WMS, WMTS, XYZ e Vector.</strong> Il cliente ha spesso 
+        l'esigenza di accedere ad informazioni residenti in altri sistemi che fruibili 
+        gratuitamente grazie alla possibilità di accedere a degli Endpoint pubblici. 
+        Questa funzionalità permette quindi di aggiungere e configurare questi nuovi 
+        livelli semplicemente impostando il corretto Endpoint ed elaborando il servizio 
+        complessivo fornito sullo stesso. 
+        <img src="telco_funzioni/livello_da_servizio.png" alt="Cap3.5" class="img-fluid">
+        Nel menù che si attiva è mostrato l'elenco dei livelli già configurati in 
+        precedenza ed è presente il bottone, <strong> “AGGIUNGI LIVELLO”</strong> che da accesso allo 
+        strumento che permette di agganciare un nuovo servizio esterno, tra quelli 
+        elencati sopra, e pubblicarlo come livello aggiuntivo.
+        Nella seguente immagine è mostrata l'interfaccia che si attiva con la Picklist 
+        che permette di selezionare la tipologia di servizio che si vuole pubblicare.
+        <img src="telco_funzioni/nuovo_livello_servizio.png" alt="Cap3.5.1" class="img-fluid">
+        Selezionando il tipo di servizio e successivamente digitando nella casella di 
+        testo apposita, l'URL del Endpoint sul quale viene pubblicato, lato server si 
+        accederà al servizio e se questo è raggiungibile verranno elaborate le 
+        “capabilties” fornite dal servizio (es. livelli pubblicati, stili ecc.) che verranno 
+        presentate nell'interfaccia affinché l'utente possa impostare e configurare in 
+        completa autonomia il livello aggiuntivo.
+        <img src="telco_funzioni/livello_da_servizio_3.png" alt="Cap3.5.2" class="img-fluid">
+        È possibile selezionare uno o più livelli tra quelli pubblicati, aggiungere un 
+        Titolo e alte informazioni che permetteranno in seguito di distinguerli
+        nell'elenco visto all'inizio del paragrafo. Al termine della procedura, 
+        procedendo con il salvataggio della nuova configurazione, il nuovo livello
+        apparirà nell'elenco e potrà essere attivato/disattivato agendo sull'apposito 
+        <strong>toggle_item.</strong>
+    </p>
+</div>
+
+<div id="livelli_aggiuntivi_da_file" class="container">
+    <h3>3.6 Livello aggiuntivo da file</h3>
+    <p>
+        La funzionalità permette, in modo analogo a quella descritta nel paragrafo 
+        precedente, di aggiungere e pubblicare sull'applicazione dei livelli esterni da 
+        file geografici. Nella release 1.0 i formati che è possibile importare sul sistema 
+        sono lo Shape e il CSV (per oggetti puntuali), nella quale struttura devono 
+        essere presenti le due colonne che memorizzano i dati della coordinata. 
+        Nell'attuale release lo strumento è limitato al caricamento di file di medie e 
+        piccole dimensioni affinché il processo non interferisca con i limiti di Time-Out 
+        imposti dagli applicativi WEB.
+        In continuità con la UX degli altri strumenti, si accede alla funzionalità mediante 
+        il terzo bottone dall'alto della Sidebar, che attiva l'interfaccia mostrata nella 
+        seguente immagine.
+        <img src="telco_funzioni/livello_da_file.png" alt="Cap3.6" class="img-fluid">
+        La logica di funzionamento è comune alla funzionalità precedente, sono 
+        mostrati gli eventuali livelli precedentemente caricati e configurati ed è 
+        presente il bottone che da la possibilità all'utente di aggiungerne di nuovi. 
+        La modalità di gestione dei nuovi livelli aggiunti, comune ad altre funzionalità 
+        presenti nel prodotto e descritte nei paragrafi seguenti, cambierà a seconda 
+        del profilo utente. Infatti di default i livelli aggiuntivi saranno PRIVATI, cioè 
+        visibili solo all'utente che li ha caricati e configurati. Alcuni profili utente, con 
+        maggiori autorizzazioni, avranno la possibilità di caricare livelli aggiuntivi come 
+        PUBBLICI, in questo caso il livello e i dati in esso contenuti e pubblicati saranno 
+        accessibili dalle sessioni di tutti gli utenti registrati nel sistema. 
+        In corrispondenza di ciascun livello caricato, alla destra dell'etichetta che lo 
+        descrive, è presente una toolbar con tre bottoni che attivano altrettanti 
+        menù/interfacce:
+    </p>
+        <ul>
+            <li>
+                <strong>Info </strong> <img src="arrow-right.svg" alt="right arrow icon svg"> Il bottone di info, attiva una scheda in cui sono sintetizzate le 
+                informazioni associate al singolo livello, quali il nome del file, il nome del 
+                livello, il nome dello stile di rappresentazione ecc.
+            </li>
+            <li>
+                <strong>Legend </strong><img src="arrow-right.svg" alt="right arrow icon svg"> Il bottone attiva un popup in cui è mostrato lo stile di 
+                rappresentazione configurato per il livello in oggetto.
+            </li>
+            <li>
+                <strong>Toolbox </strong><img src="arrow-right.svg" alt="right arrow icon svg"> Il bottone con i tre puntini verticali attiva un sotto-menù che 
+                permette di modificare il livello, di eliminarlo e di modificarne il livello di 
+                opacità con cui viene rappresentato in mappa.
+            </li>
+        </ul>
+    <p>
+        Con il bottone “AGGIUNGI” si attiva l'interfaccia che permette di aggiungere 
+        un nuovo livello eseguendo l'upload di un nuovo file geografico. Tale 
+        interfaccia si presenta come nell'immagine che segue
+        <img src="telco_funzioni/livello_da_file_1.png" alt="Cap3.6.1" class="img-fluid">
+        L'interfaccia permette di assegnare un nome al livello, di assegnare lo stile di 
+        rappresentazione da una Picklist di stili predefiniti, il sistema di coordinate del 
+        dato di origine da una Picklist con l'elenco degli SR (EPSGXXXX) comunemente 
+        utilizzati nel territorio italiano, un campo note nel quale annotarsi delle 
+        peculiarità e, naturalmente, lo strumento per selezionare il file da caricare nel 
+        sistema.
+        Al termine del caricamento, con il bottone “SALVA” si consolida l'operazione e 
+        il livello appare nella lista tra quelli pubblicati.
+    </p>
+</div>
+
+<div class="container" id="le_mie_viste">
+    <h3>3.7 Le mie viste</h3>
+    <p>
+        Per attivare lo strumento di gestione dei Bookmark (le Viste dell'utente) è
+        necessario selezionare il quarto bottone dall'alto sulla Sidebar di sinistra. Si 
+        aprirà un menù simile a quello mostrato nella seguente immagine.
+        <img src="telco_funzioni/le_mie_viste.png" alt="Cap3.7" class="img-fluid">
+        Un Bookmark (Vista) è una “fotografia” area visualizzata in mappa e con i livelli
+        attivi nel momento in cui viene creato e salvato. In funzione del profilo utente il 
+        Bookmark può essere creato come PRIVATO o come PUBBLICO e così come 
+        per i livelli aggiuntivi nel primo caso sarà elencato solo nella lista dell'utente 
+        che lo ha creato e nel secondo sarà accessibile a tutti.
+        Su ogni Bookmark registrato è possibile eseguire il posizionamento, 
+        selezionando il bottone “mirino” a destra dell'etichetta, oppure modificarlo o 
+        eliminarlo dal menù a tendina che si attiva con il bottone <strong>“tre puntini verticali”.</strong> 
+    </p>
+</div>
+
+<div class="container" id="gestione_cartografia_di_sfondo">
+    <h3>3.8 Gestione cartografia di sfondo</h3>
+    <p>
+        La toolbar posizionata in basso a destra permette di accedere agli strumenti di 
+        selezione e gestione della cartografia di sfondo, che nella release 1.0 prevede
+        a possibilità di utilizzare la cartografia di Open Street Map o i diversi livelli 
+        forniti da Google Maps.
+        È possibile selezionare quale sfondo utilizzare da una Picklist come mostrato in 
+        seguito.
+        <img src="telco_funzioni/gestione_cartografia.jpeg" alt="Cap3.8" class="img-fluid">
+        Nell'immagine è mostrato l'aspetto della mappa selezionando il livello “Google 
+        satellite”.
+        Il bottone “rotellina dentata” a sinistra della picklist da accesso allo strumento 
+        che permette di impostare sia il livello di opacità sia il livello a Toni di Grigio 
+        della cartografia di sfondo mostrata, feature molto comoda nel caso in cui si 
+        voglia dare risalto ai livelli di rete senza comunque spegnere la Basemap.
+        Un esempio è mostrato nella seguente immagine
+        <img src="telco_funzioni/gestione_cartografia_1.png" alt="Cap3.8.1" class="img-fluid">
+        La cartografia di sfondo può anche essere completamente spenta, ad esempio 
+        se tra i livelli predefiniti e/o caricati successivamente è presente una 
+        cartografia vettoriale o un WMS, proprietario più dettagliato o recente.
+    </p>
+</div>
+
+<div class="container" id="street_view">
+    <h3>3.9 Street view</h3>
+    <p>
+        Il bottone a destra della Picklist, “Libretto Blue”, permette di accedere ad una 
+        toolbar dalla quale, tra gli altri, attivare la vista “Google Street View”.
+        Attivando Google Street View l'applicazione assume l'aspetto mostrato nella 
+        seguente immagine.
+        <img src="telco_funzioni/street_view.jpg" alt="Cap3.9" class="img-fluid">
+        Nella parte superiore dell'interfaccia viene mostrata la vista “Street View” con 
+        i classici bottoni di navigazione, mentre nella parte inferiore c'è la mappa con 
+        indicata dalla freccia bianca su cerchio nero, posizione ed orientamento della 
+        vista. Naturalmente navigando sullo Street View posizione ed orientamento 
+        del cursore cambiano di conseguenza.
+        Per disattivare la modalità di rappresentazione Street View è sufficiente 
+        cliccare una seconda volta nel bottone del menù.
+    </p>
+</div>
+
+<div class="container" id="stampa">
+    <h3>3.10 Stampa</h3>
+    <p>
+        Nella stessa toolbar da cui si attiva “Google Street View” è presente il bottone 
+        che attiva il Tool di Stampa, cioè lo strumento che permette di catturare 
+        quanto visualizzato in mappa nel dato momento, impostando alcuni semplici 
+        parametri, e di produrre un file PDF relativo.
+        Va sottolineato che lo strumento si classifica come “Tool di Stampa” per un 
+        applicativo WEB quindi non ha la pretesa di diventare un vero e proprio 
+        strumento di plottaggio attraverso il quale operare configurazioni complesse 
+        sia a livello di visibilità e stili degli oggetti rappresentati sulla mappa, sia a 
+        livello di layout prodotto (es. cartigli, legende, testi automatici ecc.).
+        Il menù di configurazione della stampa è mostrato nell'immagine che segue, nel 
+        quale è presentata anche la preview del file che si otterrà, preview che 
+        cambierà dinamicamente in funzione delle impostazioni di configurazione.
+        <img src="telco_funzioni/stampa.png" alt="Cap3.10">
+        Le configurazioni che è possibile impostare dal Tool di Stampa sono:
+    </p>
+    <ul>
+        <li>
+            <strong> Intestazione </strong><img src="arrow-right.svg" alt="right arrow icon svg"> Il testo che si desidera venga mostrato in alto a destra 
+            sopra la viewport della mappa
+        </li>
+        <li>
+            <strong> Logo </strong> <img src="arrow-right.svg" alt="right arrow icon svg">L'eventuale logo dell'azienda che gestisce il sistema o altre 
+            immagini nel formato corretto (JPEG e PNG).
+        </li>
+        <li>
+            <strong> Orientamento </strong><img src="arrow-right.svg" alt="right arrow icon svg"> Si può selezionare sia la rappresentazione orizzontale 
+            sia quella verticale.
+        </li>
+        <li>
+            <strong>Formato</strong> <img src="arrow-right.svg" alt="right arrow icon svg">Selezionato da una Picklist; al momento sono presenti i 
+            formati A3, A4 e A5.
+        </li>
+        <li>
+            <strong> Risoluzione </strong><img src="arrow-right.svg" alt="right arrow icon svg"> Selezionata da una Picklist permette di impostare i DPI 
+            con i quali verrà prodotto il PDF finale; attualmente sono possibili i valori 
+            72, 150, 300 dpi.
+        </li>
+        <li>
+            <strong>Scala</strong> <img src="arrow-right.svg" alt="right arrow icon svg"> Selezionata da una Picklist di valori; naturalmente, in funzione 
+            del valore di scala impostato cambierà di conseguenza l'ampiezza 
+            dell'area di stampa, relativa comunque al centro della mappa.
+        </li>
+    </ul>
+    <p>
+        Al termine della configurazione, selezionando il bottone “Crea PDF”, viene 
+        prodotto il file creato e parte il download dello stesso nella cartella del PC 
+        locale così come da configurazione del browser utilizzato. 
+    </p>
+</div>
+
+<div class="container" id="otdr">
+    <h3>3.11 OTDR</h3>
+    <p>
+        Lo strumento di OTDR permette di simulare la gestione di un guasto fibra per 
+        individuare il punto esatto in cui si è verificato sulla base della misura ottica 
+        effettuata dallo strumento OTDR in uno dei due estremi del Segmento Ottico 
+        sul quale è stato segnalato il guasto stesso. La funzionalità quindi si attiva 
+        partendo dalla Scheda di Dettaglio del Segmento Ottico con la modalità 
+        operativa così come descritto di seguito:
+    </p>
+    <ul>
+        <li>
+            Si accede alla Scheda di Dettaglio del Segmento Ottico ad esempio 
+            cercandolo attraverso la “Ricerca Asset” a da questa attivandola con il 
+            relativo posizionamento ed evidenziazione su mappa.
+        </li>
+        <li>
+            Nella scheda di dettaglio si selezione il bottone “OTDR” che attiva una 
+            interfaccia utente come quella mostrata nella seguente immagine.
+        </li>
+        <li>
+            Sulla combo box “Seleziona Estremo Fibra” si procede alla selezione o 
+            del punto di partenza o del punto di arrivo del Seg. Ottico
+        </li>
+        <li>
+            Si inserisce il valore di lunghezza ottica misurata in campo con lo 
+            strumento nel campo “Lunghezza Segmento”.
+        </li>
+        <li>
+            Si avvia la geolocalizzazione del punto di guasto selezionando il bottone 
+            “Avvia”, che attiva il motore di Tracing, il quale, tenendo conto delle 
+            lunghezze ottiche (comprensive di extra-lunghezza da datasheet del 
+            modello di cavo e delle eventuali scorte cavo presenti) delle fibre che 
+            compongono il segmento ottico, individua con grande precisione il 
+            punto di guasto, evidenziandolo sulla mappa e riportando nella sezione 
+            superiore Circuiti e Clienti presumibilmente coinvolti nel guasto.
+        </li>
+    </ul>
+    <p>
+        
+    </p>
+</div>
+
+<div class="container" id="tool_gestione_schiacciamenti">
+    <h3>3.12 Tool gestione schiacciamenti</h3>
+    <p>
+        Lo strumento è opzionale perché non tutti gli operatori di Telecomunicazioni 
+        hanno la necessità di valutare, in particolari situazioni critiche, gli eventuali 
+        schiacciamenti nei servizi fibra realizzati per un particolare tipo di clientela.
+        La funzionalità diventa di fondamentale importanza quando l'operatore Telco 
+        rilascia servizi fibra a clienti che richiedono la doppia via e quindi un link di 
+        backup; in queste situazioni, infatti riuscire a valutare se e in che entità link 
+        principale e link di backup sono “schiacciati” permetterà di essere molto più
+        efficaci in caso di problematiche.
+        Lo strumento si attiva attraverso l'ultimo bottone in basso mostrato 
+        nell'immagine che segue.
+        <img src="telco_funzioni/gestione_guasti.png" alt="Cap3.12" class="img-fluid">
+    </p>
+    <ul>
+        <li>
+            Nelle due caselle di testo, attraverso la ricerca per auto-completamento 
+            si inseriscono i Circuiti o i Segmenti Ottici per i quali si vogliono 
+            analizzare gli eventuali schiacciamenti.
+        </li>
+        <li>
+            Avviando l'analisi attraverso il bottone “ANALISI SCHIACCIAMENTI” il 
+            sistema verifica eventuali tratti in comune tra i due circuiti/segmenti sia 
+            in termini di percorso cavo (fibre allocate sullo stesso cavo), sia in termini 
+            di percorso civile (fibre allocate su cavi diversi posati all'interno della 
+            stessa infrastruttura civile).        
+        </li>
+        <li>
+            Al termine dell'analisi, nella sezione superiore dell'interfaccia grafica, 
+            sono mostrati i “Cavi in Comune”, i “Siti in Comune” e le “Infrastrutture in 
+            Comune” tra i due circuiti/segmenti.
+        </li>
+        <li>
+            L'esito dell'analisi può inoltre essere esportato in formato PDF, Excel e 
+            CSV, file nei quali saranno riportate in formato tabella rei risultati 
+            mostrati.
+        </li>
+    </ul>
+</div>

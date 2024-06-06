@@ -1,0 +1,35 @@
+<header class="header">
+  <a href="#" class="logo-link">
+    <img src="ebworld-logo.png" alt="Logo EBW" class="logo">
+</a>
+  <div class="menu-container">
+    <button mat-button [matMenuTriggerFor]="aboveMenu" class="menu-item">About</button>
+    <mat-menu #aboveMenu="matMenu" yPosition="above">
+        <button mat-menu-item>Cosa facciamo</button>
+        <button mat-menu-item>Chi siamo</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="belowMenu" class="menu-item">Product Guide</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+        <button mat-menu-item (click)="setSelectedMenu('geo4btelco')">Geo4B Telco</button>
+        <button mat-menu-item (click)="setSelectedMenu('geo4bwater')">Geo4B Water</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="beforeMenu" class="menu-item">Contattaci</button>
+    <mat-menu #beforeMenu="matMenu" yPosition="below">
+        <button mat-menu-item>
+            <a href="mailto:info@ebw.it">Mandaci una mail</a>
+        </button>
+        <button mat-menu-item [matMenuTriggerFor]="chiamaci">Chiamaci</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="afterMenu" class="menu-item">Vieni a trovarci</button>
+    <mat-menu #afterMenu="matMenu" xPosition="after">
+        <a mat-menu-item href="https://www.google.it/maps/place/EBWorld+s.r.l./@43.9014259,12.8567781,20.25z/data=!4m63m51s0x132d1e81610cc4cf:0x5f661f4b289d96e28m23d43.9013474d12.85711116s%2Fg%2F1tl6nnxr?entry=ttu">Maps</a>
+    </mat-menu>
+
+    <mat-menu #chiamaci="matMenu">
+        <button mat-menu-item>+39 0721 25089</button>
+    </mat-menu>
+</div>
+</header>

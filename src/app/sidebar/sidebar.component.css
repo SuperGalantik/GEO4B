@@ -1,0 +1,28 @@
+.content
+{
+    margin-top: 150px;
+}
+
+
+@media (width <= 1000px) 
+{
+    .sidebar
+    {
+        display: none;
+    }
+}
+
+@media (width > 1000px)
+{
+    .sidebar
+    {
+        position:fixed;
+        border-radius: 10px;
+    }   
+}
+
+.offcanvas-body
+{
+    margin-top: 12vh;
+    
+}

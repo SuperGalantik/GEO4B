@@ -1,0 +1,88 @@
+/* Stile per la barra di navigazione */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12vh;
+  background-color: #007bff;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; /* Assicurati che sia sopra tutto il contenuto */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiungi una leggera ombra */
+}
+
+/* Stile per il logo */
+.logo {
+  width: auto;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  width: 22%;
+  font-weight: bold;
+  color: #007bff;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Stile per gli elementi del menu */
+.menu-item {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.menu-item:hover {
+  background-color: #0056b3;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+/* Container del menu */
+.menu-container {
+  display: flex;
+}
+
+/* Aggiungi padding-top per evitare che il contenuto vada sotto la navbar */
+.section {
+  padding-top: 5rem; /* Aggiungi spazio per compensare l'altezza della navbar */
+}
+
+/* Layout moderni e responsivi */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding-top: 5rem; /* Aggiungi spazio per compensare l'altezza della navbar */
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+img.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
