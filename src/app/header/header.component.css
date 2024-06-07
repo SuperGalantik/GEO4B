@@ -174,7 +174,6 @@ img.img-fluid {
 
  
 .dropdown:hover .dropdown-content { 
-	/* display: block; */ 
-	height: auto; 
+	/* display: block; */
 	opacity: 1; 
 }
