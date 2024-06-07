@@ -1,90 +1,87 @@
-<header class="header">
-  <a href="#" class="logo-link">
-    <img src="ebworld-logo.png" alt="Logo EBW" class="logo">
-</a>
-  <div class="menu-container">
-    <button mat-button [matMenuTriggerFor]="aboveMenu" class="menu-item">About</button>
-    <mat-menu #aboveMenu="matMenu" yPosition="above">
-        <button mat-menu-item>Cosa facciamo</button>
-        <button mat-menu-item>Chi siamo</button>
-    </mat-menu>
+<!-- <header class="header">
+    <a href="" class="logo-link">
+        <img src="ebworld-logo.png" alt="Logo EBW" class="logo">
+    </a>
 
-    <button mat-button [matMenuTriggerFor]="belowMenu" class="menu-item">Product Guide</button>
-    <mat-menu #belowMenu="matMenu" yPosition="below">
-        <button mat-menu-item (click)="setSelectedMenu('geo4btelco')">Geo4B Telco</button>
-        <button mat-menu-item (click)="setSelectedMenu('geo4bwater')">Geo4B Water</button>
-    </mat-menu>
+    <div class="menu-container">
+        <button mat-button [matMenuTriggerFor]="aboveMenu" class="menu-item">About</button>
+        <mat-menu #aboveMenu="matMenu" yPosition="above">
+            <button mat-menu-item>Cosa facciamo</button>
+            <button mat-menu-item>Chi siamo</button>
+        </mat-menu>
 
-    <button mat-button [matMenuTriggerFor]="beforeMenu" class="menu-item">Contattaci</button>
-    <mat-menu #beforeMenu="matMenu" yPosition="below">
-        <button mat-menu-item>
-            <a href="mailto:info@ebw.it">Mandaci una mail</a>
-        </button>
-        <button mat-menu-item [matMenuTriggerFor]="chiamaci">Chiamaci</button>
-    </mat-menu>
+        <button mat-button [matMenuTriggerFor]="belowMenu" class="menu-item">Product Guide</button>
+        <mat-menu #belowMenu="matMenu" yPosition="below">
+            <button mat-menu-item (click)="setSelectedMenu('geo4btelco')">Geo4B Telco</button>
+            <button mat-menu-item (click)="setSelectedMenu('geo4bwater')">Geo4B Water</button>
+        </mat-menu>
 
-    <button mat-button [matMenuTriggerFor]="afterMenu" class="menu-item">Vieni a trovarci</button>
-    <mat-menu #afterMenu="matMenu" xPosition="after">
-        <a mat-menu-item href="https://www.google.it/maps/place/EBWorld+s.r.l./@43.9014259,12.8567781,20.25z/data=!4m63m51s0x132d1e81610cc4cf:0x5f661f4b289d96e28m23d43.9013474d12.85711116s%2Fg%2F1tl6nnxr?entry=ttu">Maps</a>
-    </mat-menu>
+        <button mat-button [matMenuTriggerFor]="beforeMenu" class="menu-item">Contattaci</button>
+        <mat-menu #beforeMenu="matMenu" yPosition="below">
+            <button mat-menu-item>
+                <a href="mailto:info@ebw.it">Mandaci una mail</a>
+            </button>
+            <button mat-menu-item [matMenuTriggerFor]="chiamaci">Chiamaci</button>
+        </mat-menu>
 
-    <mat-menu #chiamaci="matMenu">
-        <button mat-menu-item>+39 0721 25089</button>
-    </mat-menu>
-</div>
-</header>
+        <button mat-button [matMenuTriggerFor]="afterMenu" class="menu-item">Vieni a trovarci</button>
+        <mat-menu #afterMenu="matMenu" xPosition="after">
+            <a mat-menu-item href="https://www.google.it/maps/place/EBWorld+s.r.l./@43.9014259,12.8567781,20.25z/data=!4m63m51s0x132d1e81610cc4cf:0x5f661f4b289d96e28m23d43.9013474d12.85711116s%2Fg%2F1tl6nnxr?entry=ttu">Maps</a>
+        </mat-menu>
 
-<header>
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs" id="navId" role="tablist">
-        <li class="nav-item">
-            <a href="#tab1Id" class="nav-link active" data-bs-toggle="tab" aria-current="page">Active</a>
-        </li>
-        
-        <li class="nav-item dropdown">
-            <a
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="#"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Dropdown</a
-            >
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#tab2Id">Action</a>
-                <a class="dropdown-item" href="#tab3Id">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#tab4Id">Action</a>
-            </div>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a href="#tab5Id" class="nav-link" data-bs-toggle="tab"
-                >Another link</a
-            >
-        </li>
-        <li class="nav-item" role="presentation">
-            <a href="#" class="nav-link disabled" data-bs-toggle="tab"
-                >Disabled</a
-            >
-        </li>
-    </ul>
-    
-    <!-- Tab panes -->
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="tab1Id" role="tabpanel">
-            
-        </div>
-        <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
-        <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
-        <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
-        <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
+        <mat-menu #chiamaci="matMenu">
+            <button mat-menu-item>+39 0721 25089</button>
+        </mat-menu>
     </div>
-    
-    <!-- (Optional) - Place this js code after initializing bootstrap.min.js or bootstrap.bundle.min.js -->
-    <script>
-        var triggerEl = document.querySelector("#navId a");
-        bootstrap.Tab.getInstance(triggerEl).show(); // Select tab by name
-    </script>
-    
+</header> -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a href="" class="logo-link">
+                <img src="ebworld-logo.png" alt="Logo EBW" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="https://www.ebw.it/chi-siamo/">Chi siamo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productGuideDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Product Guide
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="productGuideDropdown">
+                            <li><a class="dropdown-item" [routerLink]="['/geo4btelco']">Geo4B telco</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['/geo4bwater']">Geo4B water</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Contattaci
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+                            <li><a class="dropdown-item" href="tel:+39 0721 25089">Chiamaci</a></li>
+                            <li><a class="dropdown-item" href="mailto:info@ebw.it">Email</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="visitUsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Vienici a trovare
+                        </a>
+                        <ul class="dropdown-content dropdown-menu-end" aria-labelledby="visitUsDropdown">
+                            <li><a class="dropdown-item" href="https://www.google.it/maps/place/EBWorld+s.r.l./@43.9014259,12.8567781,20.25z/data=!4m63m51s0x132d1e81610cc4cf:0x5f661f4b289d96e28m23d43.9013474d12.85711116s%2Fg%2F1tl6nnxr?entry=ttu">Sede di Pesaro (principale)</a></li>
+                            <li><a class="dropdown-item" href="https://www.google.it/maps/place/Via+degli+Orefici,+2,+40124+Bologna+BO/@44.4941888,11.3415081,16z/data=!3m1!4b1!4m6!3m5!1s0x477fd4be2353da07:0x8be89998e9ed75e6!8m2!3d44.494185!4d11.344083!16s%2Fg%2F11cs8pn255?entry=ttu">Sede di Bologna</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>

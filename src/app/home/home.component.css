@@ -1,0 +1,33 @@
+.home_wrapper
+{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.product-img
+{
+    border-radius: 20px;
+    width: 450px;
+    height: 450px;
+    transition: transform 0.7s ease;
+}
+
+.product-img:hover
+{
+    transform: scale(1.1);
+
+}
+@media screen and (max-width: 768px) {
+    .product-button-wrapper{
+        width: 80%;
+    }
+    .home_wrapper{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 500px) {
+    .product-img{
+        height: auto;
+    }    
+}

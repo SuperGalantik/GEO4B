@@ -1,6 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 
+
+@font-face 
+{
+    font-family: Sora;
+    src: url(../public/sora-regular.ttf);
+}
+
+*
+{
+    font-family: Sora;
+}
+
 P
 {
     text-align: justify;
@@ -11,3 +23,5 @@ P
 {
     margin-top: 7vh;
 }
+
+

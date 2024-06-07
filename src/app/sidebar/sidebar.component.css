@@ -21,9 +21,10 @@
         height: 100%;
         width: 400px;
         padding: 20px;
-        background-color: #f8f9fa;
+        background-color: #2a2e43;
         overflow-y: auto;
         z-index: 1000;
         padding-bottom: 100px;
+        border-radius: 0;
     }
 }

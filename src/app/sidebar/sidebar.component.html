@@ -1,20 +1,21 @@
 <div class="container row" style="margin: 0; padding: 0; margin-top: 100px; ">
-  <div class="col-1"></div>
 
-  <div class="col-5">
-    <div class="list-group sidebar">
-      @if (menuService.selectedMenu == "geo4bwater")
-      {
+  @if (menuService.selectedMenu == "geo4bwater")
+  {
+    <div class="col-5">
+      <div class="list-group sidebar">
         <app-geo4b-water/>
-      }
-      @else 
-      {
-        <app-geo4b-telco/>
-      }
+      </div>
     </div>
-    <!--list group-->
-  </div>
-  <!--col-5-->
+  }
+  @else if (menuService.selectedMenu == "geo4btelco")
+  {
+    <div class="col-5">
+      <div class="list-group sidebar">
+        <app-geo4b-telco/>
+      </div>
+    </div>
+  }
 
   <div class="col-sm-12 col-lg-6">
     <router-outlet/>

@@ -1,26 +1,25 @@
-/* Stile per la barra di navigazione */
+
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 12vh;
-  background-color: #007bff;
+  background-color: #2a2e43;
   color: #fff;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000; /* Assicurati che sia sopra tutto il contenuto */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiungi una leggera ombra */
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Stile per il logo */
 .logo {
   width: auto;
   padding: 0.5rem 1rem;
   font-size: 1.5rem;
-  width: 200px;
+  width: 150px;
   font-weight: bold;
   color: #007bff;
   background-color: #fff;
@@ -40,7 +39,6 @@
   transform: scale(1.1);
 }
 
-/* Stile per gli elementi del menu */
 .menu-item {
   color: #fff;
   text-decoration: none;
@@ -59,22 +57,20 @@
   border: 2px solid #fff;
 }
 
-/* Container del menu */
 .menu-container {
   display: flex;
 }
 
-/* Aggiungi padding-top per evitare che il contenuto vada sotto la navbar */
+
 .section {
-  padding-top: 5rem; /* Aggiungi spazio per compensare l'altezza della navbar */
+  padding-top: 5rem;
 }
 
-/* Layout moderni e responsivi */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
-  padding-top: 5rem; /* Aggiungi spazio per compensare l'altezza della navbar */
+  padding-top: 5rem;
   background-color: #f8f9fa;
   color: #333;
 }
@@ -93,4 +89,92 @@ img.img-fluid {
   max-width: 100%;
   height: auto;
   border-radius: 0.5rem;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.8s ease;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.dropdown-menu-end {
+  right: 0;
+  left: auto;
+}
+
+@keyframes openDropdown 
+{
+  
+  0%
+  {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+
+  100%
+  {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  } 
+}
+
+@keyframes closeDropdown 
+{
+  0%
+  {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  } 
+  
+  100%
+  {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  will-change: opacity, visibility, display;
+  transition: closeDropdown 0.8s ease-out;
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+  transition: openDropdown 0.8s ease-in;
+  visibility: visible;
+  opacity:1;
+}
+
+
+.dropdown-content { 
+	/* display: none; */ 
+	height: 0; 
+	overflow: hidden; 
+	opacity: 0; 
+	transition: opacity 0.3s ease; 
+} 
+
+ 
+.dropdown:hover .dropdown-content { 
+	/* display: block; */ 
+	height: auto; 
+	opacity: 1; 
 }

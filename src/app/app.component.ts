@@ -5,13 +5,14 @@ import { FooterComponent } from "./footer/footer.component";
 import { Subscription, filter } from 'rxjs';
 import { ViewportScroller } from '@angular/common';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { HomeComponent } from "./home/home.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, HeaderComponent, SidebarComponent, FooterComponent, RouterLink]
+    imports: [RouterOutlet, HeaderComponent, SidebarComponent, FooterComponent, RouterLink, HomeComponent]
 })
 export class AppComponent implements OnInit, OnDestroy
 {

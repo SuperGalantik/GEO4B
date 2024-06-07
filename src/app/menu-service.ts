@@ -3,9 +3,7 @@ import { Injectable } from "@angular/core";
 @Injectable({providedIn: 'root'})
 export class MenuService
 {
-    public selectedMenu: string = "geo4bwater"
-    
-    ;
+    public selectedMenu: string = "";
 
     public setSelectedMenu(product: string)
     {
