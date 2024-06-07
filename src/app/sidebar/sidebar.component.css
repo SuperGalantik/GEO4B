@@ -1,26 +1,29 @@
-.content
+.offcanvas-body
 {
-    margin-top: 150px;
+    margin-top: 12vh;
 }
 
-@media screen and (width <= 1000px) 
-{
-    .sidebar
-    {
+
+@media screen and (width <=1000px) {
+    .sidebar {
         display: none;
     }
 }
 
-@media screen and (width > 1000px)
-{
-    .sidebar
+@media screen and (width > 1000px) {
+    .sidebar 
     {
-        position:fixed;
-        border-radius: 10px;
-    }   
-}
-
-.offcanvas-body
-{
-    margin-top: 12vh;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 12vh;
+        left: 0;
+        height: 100%;
+        width: 400px;
+        padding: 20px;
+        background-color: #f8f9fa;
+        overflow-y: auto;
+        z-index: 1000;
+        padding-bottom: 100px;
+    }
 }

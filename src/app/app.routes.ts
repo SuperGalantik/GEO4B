@@ -8,6 +8,7 @@ import { TelcoArchitetturaComponent } from './geo4b-telco/telco-architettura/tel
 import { TelcoRoadMapComponent } from './geo4b-telco/telco-road-map/telco-road-map.component';
 import { TelcoFunzioniComponent } from './geo4b-telco/telco-funzioni/telco-funzioni.component';
 import { AuthGuardService } from './auth-guard.service';
+import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = 
 [
@@ -31,9 +32,7 @@ export const routes: Routes =
         ]
     },
 
-    {
-        path: '', redirectTo: '/geo4btelco', pathMatch: 'full'
-    },
+    { path: 'geo4b', component: HomeComponent },
 
-    {path: '**', redirectTo: ''},
+    { path: '**', redirectTo: '/geo4b' },
 ];

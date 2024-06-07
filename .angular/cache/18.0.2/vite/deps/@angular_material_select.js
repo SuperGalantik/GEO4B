@@ -1,19 +1,21 @@
 import {
   CdkConnectedOverlay,
   CdkOverlayOrigin,
-  CdkScrollableModule,
   Overlay,
-  OverlayModule,
+  OverlayModule
+} from "./chunk-OMDRCJZC.js";
+import {
+  CdkScrollableModule,
   ViewportRuler
-} from "./chunk-BRVK643V.js";
+} from "./chunk-VJ7LH7PJ.js";
+import "./chunk-TFRRLPVW.js";
 import {
   SelectionModel
-} from "./chunk-5Z7UHG2Z.js";
+} from "./chunk-7D6NLMUP.js";
 import {
   A,
   ActiveDescendantKeyManager,
   DOWN_ARROW,
-  Directionality,
   ENTER,
   ErrorStateMatcher,
   LEFT_ARROW,
@@ -25,7 +27,6 @@ import {
   MatOption,
   MatOptionModule,
   ObserversModule,
-  Platform,
   RIGHT_ARROW,
   SPACE,
   UP_ARROW,
@@ -33,10 +34,14 @@ import {
   _countGroupLabelsBeforeOption,
   _getOptionScrollPosition,
   addAriaReferencedId,
-  coerceBooleanProperty,
   hasModifierKey,
   removeAriaReferencedId
-} from "./chunk-X4GRX665.js";
+} from "./chunk-QEHOLEZN.js";
+import {
+  Directionality,
+  Platform,
+  coerceBooleanProperty
+} from "./chunk-LW7MP2QX.js";
 import {
   animate,
   animateChild,

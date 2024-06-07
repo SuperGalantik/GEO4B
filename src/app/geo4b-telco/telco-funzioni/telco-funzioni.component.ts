@@ -1,9 +1,10 @@
+import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-telco-funzioni',
   standalone: true,
-  imports: [],
+  imports: [CdkVirtualScrollViewport],
   templateUrl: './telco-funzioni.component.html',
   styleUrl: './telco-funzioni.component.css'
 })

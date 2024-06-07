@@ -1,5 +1,5 @@
 <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
-    <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+    <a [routerLink]="['/geo4btelco']" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
         <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
         <span class="fs-5 fw-semibold">GEO4B TELCO</span>
     </a>
@@ -26,9 +26,8 @@
         </li>
 
         <!-- Funzionalità del prodotto geo4b water -->
-        <li class="mb-1">
-            
-            <mat-accordion>
+        <mat-accordion multi="false">
+            <li class="mb-1">
                 <mat-expansion-panel (click)="onNavigateTo('/geo4btelco/funzioni')" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                     <mat-expansion-panel-header>
                         <mat-panel-title>
@@ -50,14 +49,12 @@
                         <li><a [routerLink]="['/geo4btelco', 'funzioni']" fragment="gestione_schiacciamenti" class="link-dark rounded">3.12 TOOL GESTIONE SCHIACCIAMENTI</a></li>
                     </ul>
                 </mat-expansion-panel>
-            </mat-accordion>
-        </li>
+            </li>
+            
+            <!-- <li class="border-top my-3"></li> -->
         
-        <!-- <li class="border-top my-3"></li> -->
-    
-        <!-- Roadmap di geo4b water -->
-        <li class="mb-1">
-            <mat-accordion>
+            <!-- Roadmap di geo4b water -->
+            <li class="mb-1">
                 <mat-expansion-panel (click)="onNavigateTo('/geo4btelco/roadmap')" (opened)="roadmapOpenState = true" (closed)="roadmapOpenState = false">
                     <mat-expansion-panel-header>
                         <mat-panel-title>
@@ -69,7 +66,7 @@
                         <li><a [routerLink]="['/geo4btelco', 'roadmap']" fragment="q3" class="link-dark rounded">4.2 GEO4B TELCO 1.2 (Q3-2024)</a></li>
                     </ul>
                 </mat-expansion-panel>
-            </mat-accordion>
-        </li>
+            </li>
+        </mat-accordion>
     </ul>
 </div>

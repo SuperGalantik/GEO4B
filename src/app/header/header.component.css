@@ -20,12 +20,20 @@
   width: auto;
   padding: 0.5rem 1rem;
   font-size: 1.5rem;
-  width: 22%;
+  width: 200px;
   font-weight: bold;
   color: #007bff;
   background-color: #fff;
   border-radius: 0.5rem;
   transition: transform 0.3s ease;
+}
+
+@media screen and (max-width: 1050px)
+{
+  .logo
+  {
+    width: 100px;
+  }
 }
 
 .logo:hover {

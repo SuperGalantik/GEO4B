@@ -1,7 +1,82 @@
-.collapse {
+.collapse 
+{
     padding-left: 25px;
 }
 
-.expansion-no-elements:hover {
-    background-color: rgba(0, 0, 0, 0.04);
-}
+/* Stile per l'intero mat-accordion */
+mat-accordion {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    background-color: #f9f9f9;
+  }
+  
+  /* Stile per ogni mat-expansion-panel */
+  mat-expansion-panel {
+    margin: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  /* Stile per l'header di ogni mat-expansion-panel */
+  mat-expansion-panel-header {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  /* Stile per il titolo del pannello */
+  mat-panel-title {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Stile per la lista */
+  .btn-toggle-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Stile per ogni elemento della lista */
+  .btn-toggle-nav li {
+    margin: 5px 0;
+  }
+  
+  /* Stile per i link */
+  .btn-toggle-nav a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 8px;
+    display: block;
+    border-radius: 3px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .btn-toggle-nav a:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  /* Stile per la lista senza bordi e padding */
+  .btn-toggle-nav.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  /* Stile per i link scuri */
+  .btn-toggle-nav .link {
+    color: #343a40;
+  }
+  
+  .btn-toggle-nav .link:hover {
+    color: #007bff;
+    background-color: #e9ecef;
+  }
+  
+  /* Stile per la lista con margine */
+  .btn-toggle-nav.fw-normal {
+    font-weight: normal;
+  }
