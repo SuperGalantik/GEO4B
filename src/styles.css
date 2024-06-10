@@ -13,6 +13,18 @@
     font-family: Sora;
 }
 
+.row
+{
+    margin: 0;
+    padding: 0;
+}
+
+.col-12
+{
+    margin: 0px;
+    padding: 0px;
+}
+
 P
 {
     text-align: justify;

@@ -33,4 +33,9 @@ export class HeaderComponent
     console.log('/' + this.menuService.selectedMenu);
     this.router.navigate(['/' + this.menuService.selectedMenu]);
   }
+
+  onFadeDropDown(): void
+  {
+    
+  }
 }

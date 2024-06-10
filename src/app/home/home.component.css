@@ -1,6 +1,5 @@
 .home_wrapper
 {
-    width: 100vw;
     display: flex;
     justify-content: space-around;
 }
@@ -28,6 +27,6 @@
 }
 @media screen and (max-width: 500px) {
     .product-img{
-        height: auto;
+        height: auto
     }    
 }
