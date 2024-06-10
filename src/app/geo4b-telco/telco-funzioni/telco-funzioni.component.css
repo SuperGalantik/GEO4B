@@ -1,11 +1,11 @@
 img
 {
-    vertical-align: middle;
+  border-radius: 15px;    
 }
 
 .container
 {
   position: relative;
-  padding-top: 12%; 
-  margin-top: -12%;
+  padding-top: 14vh; 
+  margin-top: -14vh;
 }

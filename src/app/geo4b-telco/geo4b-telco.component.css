@@ -5,5 +5,31 @@
 
 .expansion-no-elements:hover
 {
-    background-color: rgba(0, 0, 0, 0.04);
+    background-color: #A8C22E;
 }
+
+.product-sidebar-wrapper
+{
+    margin-top: 12vh;
+}
+
+.active
+{
+    background-color: #A8C22E !important;
+}
+
+mat-expansion-panel-header:hover
+{
+    background-color: #A8C22E !important;    
+}
+
+.paragraph-list-item, .paragraph-list-item-link
+{
+    padding: 5px;
+}
+
+/* mat-grid-list, mat-grid-tile 
+{
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+} */

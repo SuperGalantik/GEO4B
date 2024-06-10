@@ -9,11 +9,12 @@ import { TelcoRoadMapComponent } from './geo4b-telco/telco-road-map/telco-road-m
 import { TelcoFunzioniComponent } from './geo4b-telco/telco-funzioni/telco-funzioni.component';
 import { AuthGuardService } from './auth-guard.service';
 import { HomeComponent } from './home/home.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 export const routes: Routes = 
 [
     {
-        path: 'geo4bwater', canActivate: [AuthGuardService], children: 
+        path: 'geo4bwater', component: SidebarComponent, canActivate: [AuthGuardService], children: 
         [
             {path: 'intro',         component: WaterIntroduzioneComponent},
             {path: 'architettura',  component: WaterArchitetturaComponent},
@@ -23,7 +24,7 @@ export const routes: Routes =
     },
 
     {
-        path: 'geo4btelco', canActivate: [AuthGuardService], children: 
+        path: 'geo4btelco', component: SidebarComponent, canActivate: [AuthGuardService], children: 
         [
             {path: 'intro',         component: TelcoIntroduzioneComponent},
             {path: 'architettura',  component: TelcoArchitetturaComponent},

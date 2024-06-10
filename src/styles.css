@@ -30,10 +30,20 @@ P
     text-align: justify;
 }
 
+*::selection 
+{
+    background-color: #A8C22E;
+    color: black;
+}
+
 
 .container
 {
     margin-top: 7vh;
 }
 
-
+img
+{
+    aspect-ratio: 1280 / 720;
+    border-radius: 15px;
+}

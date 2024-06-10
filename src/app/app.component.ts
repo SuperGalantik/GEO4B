@@ -6,6 +6,7 @@ import { Subscription, filter } from 'rxjs';
 import { ViewportScroller } from '@angular/common';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HomeComponent } from "./home/home.component";
+import { MatGridList } from '@angular/material/grid-list';
 
 @Component({
     selector: 'app-root',
@@ -30,6 +31,7 @@ export class AppComponent implements OnInit, OnDestroy
       this.router.navigate(["product_guide", "geo4btelco"]);   
   } 
   */
+ 
   ngOnInit(): void 
   {
     this.subscription = this.router.events.pipe

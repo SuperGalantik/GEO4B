@@ -1,26 +1,22 @@
-<div class="container row" style="margin: 0; padding: 0; margin-top: 100px; ">
-
-  @if (menuService.selectedMenu == "geo4bwater")
-  {
-    <div class="col-5">
-      <div class="list-group sidebar">
-        <app-geo4b-water/>
-      </div>
+<div class="container" style="height: max-content; padding-bottom: 50px;">
+  <div class="row" style="margin: 0; padding: 0; padding-bottom: 50px;">
+    <div class="sidebar col-2" style="padding-bottom: 50px;">
+      @if(menuService.selectedMenu == 'geo4bwater')
+      {
+        <ng-container>
+          <app-geo4b-water></app-geo4b-water>
+        </ng-container>
+      }
+      @else if(menuService.selectedMenu == 'geo4btelco')
+      {
+        <ng-container>
+          <app-geo4b-telco></app-geo4b-telco>
+        </ng-container>
+      }
     </div>
-  }
-  @else if (menuService.selectedMenu == "geo4btelco")
-  {
-    <div class="col-5">
-      <div class="list-group sidebar">
-        <app-geo4b-telco/>
-      </div>
+        
+    <div class="content col-10" style="margin-bottom: 50px;">
+      <router-outlet/>
     </div>
-  }
-
-  <div class="col-sm-12 col-lg-6">
-    <router-outlet/>
   </div>
 </div>
-
-<!--<p [innerHTML]="paragraph.content"></p>-->
-
