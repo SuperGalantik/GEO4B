@@ -1,18 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { IsActiveMatchOptions, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { MatAccordion, MatExpansionModule, MatExpansionPanel } from '@angular/material/expansion';
+import { NgIf } from '@angular/common';
 
 
 @Component({
 selector: 'app-geo4b-water',
 standalone: true,
-imports: [RouterLink, MatExpansionModule, RouterLinkActive],
+imports: [RouterLink, MatExpansionModule, RouterLinkActive, NgIf],
 templateUrl: './geo4b-water.component.html',
 styleUrl: './geo4b-water.component.css'
 })
 export class Geo4bWaterComponent 
 {
+  public displayOffcanvasTemplate: boolean = false;
+  public innerWidth!: number;
+  
   public panelOpenState: boolean = false;
+  public roadmapOpenState: boolean = false;
   public linkActiveOption: IsActiveMatchOptions = 
   {
     matrixParams: 'ignored',
@@ -20,9 +25,19 @@ export class Geo4bWaterComponent
     paths: 'exact',
     fragment: 'exact'
   }
-  public roadmapOpenState: boolean = false;
 
   constructor(private router: Router) {};
+
+  @HostListener('window:resize', ['$event'])
+  onResize() 
+  {
+    this.innerWidth = window.innerWidth;
+    if(this.innerWidth>1000)
+      this.displayOffcanvasTemplate = false;
+    else
+      this.displayOffcanvasTemplate = true
+  }
+
 
   onNavigateTo(path: string)
   {

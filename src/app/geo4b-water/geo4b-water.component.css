@@ -34,3 +34,39 @@ mat-expansion-panel-header:hover
     color: black;
     text-decoration: none;
 }
+
+.paragraph-list-item-link:hover
+{
+    background-color: #A8C22E;
+    border-radius: 5px;
+}
+
+/* mat-grid-list, mat-grid-tile 
+{
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+} */
+
+.offcanvas-body {
+    padding: 1rem;
+}
+
+.offcanvas-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.submenu-item {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-item {
+    margin-bottom: 1rem;
+}

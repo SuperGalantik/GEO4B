@@ -1,11 +1,4 @@
 
-@media screen and (min-width: 1001px)
-{
-  .off-canvas-toggler
-  {
-    display: none;
-  }
-}
 
 /* @media screen and (max-width: 1000px)
 {
@@ -32,13 +25,22 @@
   }
 } */
 
+@media screen and (min-width: 1001px)
+{
+  .off-canvas-toggler
+  {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1000px) {
-    .off-canvas-toggler {
+    .off-canvas-toggler 
+    {
       display: flex;
       position: fixed;
-      bottom: 5%; /* Modifica per posizionamento più intuitivo */
+      bottom: 10%; /* Modifica per posizionamento più intuitivo */
       left: 10px;  /* Sposta leggermente all'interno */
-      z-index: 200;
+      z-index: 2000;
       padding: 10px;
       width: 60px; /* Stessa larghezza della freccia */
       height: 60px; /* Dimensioni migliorate per una maggiore area cliccabile */
@@ -50,13 +52,16 @@
       transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
     }
   
-    .off-canvas-toggler-active {
+    .off-canvas-toggler:hover 
+    {
       background-color: #4f8aa8; /* Colore di hover più scuro */
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Ombra più intensa su hover */
       transform: scale(1.1); /* Leggera ingrandimento su hover */
+      transform: rotateY(180);
     }
   
-    .offcanvas_half-circle_toggler {
+    .offcanvas_img_toggler 
+    {
       padding: 0;
       margin: 0;
       width: 50px;
@@ -70,7 +75,7 @@
       transition: transform 0.3s, box-shadow 0.3s;
     }
   
-    .offcanvas_half-circle_toggler-active {
+    .offcanvas_img_toggler:hover {
       transform: scale(1.2); /* Maggiore ingrandimento su hover */
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra più intensa su hover */
     }
