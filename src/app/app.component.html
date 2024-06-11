@@ -1,9 +1,11 @@
 <app-header/>
 
-<div style="text-align: center;">
-  <div>
-    <router-outlet></router-outlet>
-  </div>
+<button class="btn off-canvas-toggler" id="offcanvas_toggler" (click)="onClick()" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
+  <img src="arrow-right.svg" id="offcanvas_img_toggler" class="offcanvas_half-circle_toggler" alt="circle_half">
+</button>
+
+<div class="row">
+  <router-outlet></router-outlet>
 </div>
 
 <app-footer/>

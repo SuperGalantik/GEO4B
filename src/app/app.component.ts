@@ -54,4 +54,18 @@ export class AppComponent implements OnInit, OnDestroy
   {
     this.subscription.unsubscribe();
   }
+
+  onClick()
+  {
+    if(document.getElementById('offcanvas-toggler')?.classList.contains('off-canvas-toggler-active') && document.getElementById('offcanvas_img_toggler')?.classList.contains('offcanvas_half-circle_toggler-active'))
+    {
+      document.getElementById('offcanvas-toggler')?.classList.remove('off-canvas-toggler-active');
+      document.getElementById('offcanvas_img_toggler')?.classList.remove('offcanvas_half-circle_toggler-active');
+    }
+    else
+    {
+      document.getElementById('offcanvas-toggler')?.classList.add('off-canvas-toggler-active');
+      document.getElementById('offcanvas_img_toggler')?.classList.add('offcanvas_half-circle_toggler-active');
+    }
+  }
 }

@@ -1,67 +1,67 @@
-<div class="flex-shrink-0 p-3 product-sidebar-wrapper" style="width: 380px">
-    <a [routerLink]="['/geo4btelco', 'intro']" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
-        <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-        <span class="fs-5 fw-semibold text-white">GEO4B TELCO</span>
-    </a>
-    <ul class="list-unstyled ps-0">
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
+    <div class="offcanvas-header" style="margin-top: 14vh;">
+      <h5 class="offcanvas-title" id="offcanvasSidebarLabel">GEO4B TELCO</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-unstyled ps-0">
         <mat-accordion multi="false">
-            <li class="mb-1">
-                <mat-expansion-panel [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'intro']" class="expansion-no-elements" hideToggle disabled>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            <span style="color: black;">1. INTRODUZIONE</span>
-                        </mat-panel-title>
-                    </mat-expansion-panel-header>
-                </mat-expansion-panel>
-            </li>
-            
-            <li class="mb-1">                
-                <mat-expansion-panel [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'architettura']" class="expansion-no-elements" hideToggle disabled>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            <span style="color: black;">2. ARCHITETTURA</span>
-                        </mat-panel-title>
-                    </mat-expansion-panel-header>
-                </mat-expansion-panel>
-            </li>
-
-            <li class="mb-1">
-                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-                    <mat-expansion-panel-header [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']">
-                        <mat-panel-title>
-                            <span>3. FUNZIONALITÁ</span>
-                        </mat-panel-title>
-                    </mat-expansion-panel-header>
-                    <ul class="btn-toggle-nav list-unstyled w-normal pb-1 small" style="padding-top: 10px">
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="layout_interfaccia_utente">3.1 LAYOUT DELL'INTERFACCIA UTENTE</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="navigazione_mappa">3.2 NAVIGAZIONE DELLA MAPPA</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="selezione_oggetti">3.3 SELEZIONE OGGETTI SULLA MAPPA</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="selezione_livelli">3.4 SELEZIONE LIVELLI</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="layer_agg_servizio">3.5 LAYER AGGIUNTIVI DA SERVIZIO</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="layer_agg_file">3.6 LAYER AGGIUNTIVI DA FILE</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="viste">3.7 LE MIE VISTE</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="cartografia_di_sfondo">3.8 GESTIONE CARTOGRAFIA DI SFONDO</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="street_view">3.9 STREET VIEW</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="stampa">3.10 STAMPA</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="otdr">3.11 OTDR</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="gestione_schiacciamenti">3.12 TOOL GESTIONE SCHIACCIAMENTI</a></li>
-                    </ul>
-                </mat-expansion-panel>
-            </li>
-            
-            <li class="mb-1">
-                <mat-expansion-panel (opened)="roadmapOpenState = true" (closed)="roadmapOpenState = false">
-                    <mat-expansion-panel-header [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'roadmap']">
-                        <mat-panel-title>
-                            4. ROADMAP DI PRODOTTO
-                        </mat-panel-title>
-                    </mat-expansion-panel-header>
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li class="paragraph-list-item"><a [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'roadmap']" fragment="q2" class="paragraph-list-item-link">4.1 GEO4B TELCO 1.1 (Q2-2024)</a></li>
-                        <li class="paragraph-list-item"><a [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'roadmap']" fragment="q3" class="paragraph-list-item-link">4.2 GEO4B TELCO 1.2 (Q3-2024)</a></li>
-                    </ul>
-                </mat-expansion-panel>
-            </li>
+          <li class="mb-1">
+            <mat-expansion-panel [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'intro']" class="expansion-no-elements" hideToggle disabled>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <span style="color: black;">1. INTRODUZIONE</span>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+            </mat-expansion-panel>
+          </li>
+          <li class="mb-1">
+            <mat-expansion-panel [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'architettura']" class="expansion-no-elements" hideToggle disabled>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <span style="color: black;">2. ARCHITETTURA</span>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+            </mat-expansion-panel>
+          </li>
+          <li class="mb-1">
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']">
+                <mat-panel-title>
+                  <span>3. FUNZIONALITÁ</span>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <ul class="btn-toggle-nav list-unstyled w-normal pb-1 small" style="padding-top: 10px">
+                <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="layout_interfaccia_utente">3.1 LAYOUT DELL'INTERFACCIA UTENTE</a></li>
+                <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="navigazione_mappa">3.2 NAVIGAZIONE DELLA MAPPA</a></li>
+                <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="selezione_oggetti">3.3 SELEZIONE OGGETTI SULLA MAPPA</a></li>
+                <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="selezione_livelli">3.4 SELEZIONE LIVELLI</a></li>
+                <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="layer_agg_servizio">3.5 LAYER AGGIUNTIVI DA SERVIZIO</a></li>
+                <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="layer_agg_file">3.6 LAYER AGGIUNTIVI DA FILE</a></li>
+                <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="viste">3.7 LE MIE VISTE</a></li>
+                <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="cartografia_di_sfondo">3.8 GESTIONE CARTOGRAFIA DI SFONDO</a></li>
+                <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="street_view">3.9 STREET VIEW</a></li>
+                <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="stampa">3.10 STAMPA</a></li>
+                <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="otdr">3.11 OTDR</a></li>
+                <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="gestione_schiacciamenti">3.12 TOOL GESTIONE SCHIACCIAMENTI</a></li>
+              </ul>
+            </mat-expansion-panel>
+          </li>
+          <li class="sidebar-item">
+            <mat-expansion-panel (opened)="roadmapOpenState = true" (closed)="roadmapOpenState = false">
+              <mat-expansion-panel-header [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'roadmap']">
+                <mat-panel-title>
+                  4. ROADMAP DI PRODOTTO
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <ul class="submenu">
+                <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'roadmap']" fragment="q2">4.1 GEO4B TELCO 1.1 (Q2-2024)</a></li>
+                <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'roadmap']" fragment="q3">4.2 GEO4B TELCO 1.2 (Q3-2024)</a></li>
+              </ul>
+            </mat-expansion-panel>
+          </li>
         </mat-accordion>
-    </ul>
-</div>
+      </ul>
+    </div>
+  </div>
+  
