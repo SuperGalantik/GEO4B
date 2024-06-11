@@ -1,6 +1,13 @@
-img
+.img-fluid
 {
-  border-radius: 15px;    
+  border-radius: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+h3
+{
+  font-weight: bold;
 }
 
 .container
@@ -8,4 +15,5 @@ img
   position: relative;
   padding-top: 14vh; 
   margin-top: -14vh;
+  padding-bottom: 25px;
 }

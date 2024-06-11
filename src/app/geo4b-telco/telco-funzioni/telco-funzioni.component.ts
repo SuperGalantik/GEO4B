@@ -1,5 +1,6 @@
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Host, HostListener, OnInit, ViewChild } from '@angular/core';
+import { event } from 'jquery';
 
 @Component({
   selector: 'app-telco-funzioni',
@@ -10,6 +11,5 @@ import { Component } from '@angular/core';
 })
 export class TelcoFunzioniComponent 
 {
-  // Sanitize pipe is for load the svg right arrow icon, it would give an error of html sanitizing if trying to load it normally
   constructor() {};
 }

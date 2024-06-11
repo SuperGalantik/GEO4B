@@ -14,8 +14,7 @@
                     </mat-expansion-panel-header>
                 </mat-expansion-panel>
             </li>
-
-            <!-- Funzionalità del prodotto geo4b water -->
+            
             <li class="mb-1">                
                 <mat-expansion-panel [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'architettura']" class="expansion-no-elements" hideToggle disabled>
                     <mat-expansion-panel-header>
@@ -26,17 +25,13 @@
                 </mat-expansion-panel>
             </li>
 
-            <!-- Funzionalità del prodotto geo4b water -->
-            
             <li class="mb-1">
                 <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-                    <!-- <span class="mat-panel-header"> -->
-                        <mat-expansion-panel-header [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']">
-                            <mat-panel-title>
-                                <span>3. FUNZIONALITÁ</span>
-                            </mat-panel-title>
-                        </mat-expansion-panel-header>
-                    <!-- </span> -->
+                    <mat-expansion-panel-header [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']">
+                        <mat-panel-title>
+                            <span>3. FUNZIONALITÁ</span>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
                     <ul class="btn-toggle-nav list-unstyled w-normal pb-1 small" style="padding-top: 10px">
                         <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="layout_interfaccia_utente">3.1 LAYOUT DELL'INTERFACCIA UTENTE</a></li>
                         <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="navigazione_mappa">3.2 NAVIGAZIONE DELLA MAPPA</a></li>
@@ -54,9 +49,6 @@
                 </mat-expansion-panel>
             </li>
             
-            <!-- <li class="border-top my-3"></li> -->
-        
-            <!-- Roadmap di geo4b water -->
             <li class="mb-1">
                 <mat-expansion-panel (opened)="roadmapOpenState = true" (closed)="roadmapOpenState = false">
                     <mat-expansion-panel-header [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'roadmap']">

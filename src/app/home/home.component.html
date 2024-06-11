@@ -2,11 +2,11 @@
     <div class="home_wrapper">
 
         <div class="product-button-wrapper">
-            <button (click)="onNavigateTo('telco')" class="btn"><img src="telco-logo-1000px.jpg" class="img-fluid product-img" alt="telco logo"></button>
+            <button [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'intro']" class="btn"><img src="telco-logo-1000px.jpg" class="img-fluid product-img" alt="telco logo"></button>
         </div>
 
         <div class="product-button-wrapper">
-            <button (click)="onNavigateTo('water')" class="btn"><img src="water-logo-1000px.jpg" class="img-fluid product-img" alt="water-logo"></button>
+            <button [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4bwater', 'intro']" class="btn"><img src="water-logo-1000px.jpg" class="img-fluid product-img" alt="water-logo"></button>
         </div>
     </div>
 </div>
