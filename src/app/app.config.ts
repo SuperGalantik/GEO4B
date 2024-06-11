@@ -4,6 +4,7 @@ import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { routes } from './app.routes';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { IMAGE_CONFIG } from '@angular/common';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
   providers: 
@@ -18,6 +19,6 @@ export const appConfig: ApplicationConfig = {
         disableImageSizeWarning: true, 
         disableImageLazyLoadWarning: true
       }
-    }
+    }, provideAnimationsAsync()
   ]
 };

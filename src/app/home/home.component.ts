@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuService } from '../menu-service';
-import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { IsActiveMatchOptions, Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +12,14 @@ import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/rou
 export class HomeComponent 
 {
   constructor(public menuService: MenuService, public router: Router) {};
+
+  public linkActiveOption: IsActiveMatchOptions = 
+  {
+    matrixParams: 'ignored',
+    queryParams: 'ignored',
+    paths: 'exact',
+    fragment: 'exact'
+  }
 
   onNavigateTo(product: string)
   {
