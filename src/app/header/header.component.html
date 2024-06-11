@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg text-white">
         <div class="container-fluid">
             <a href="" class="logo-link">
-                <img src="ebworld-logo.png" alt="Logo EBW" class="logo">
+                <img src="ebw-logo-bg_yellow.jpeg" alt="Logo EBW" class="logo">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,8 +12,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" (mouseover)="onFadeDropDown('aboutDropdown')" (mouseleave)="onFadeDropDown('aboutDropdown')" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item dropdown" (mouseover)="onFadeDropDown('aboutDropdown')" (mouseleave)="onMouseLeaveNavbar('aboutDropdown')">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             About
                         </a>
 
@@ -22,8 +22,8 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" (mouseover)="onFadeDropDown('productGuideDropdown')" (mouseleave)="onFadeDropDown('productGuideDropdown')" href="#" id="productGuideDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item dropdown" (mouseover)="onFadeDropDown('productGuideDropdown')" (mouseleave)="onMouseLeaveNavbar('productGuideDropdown')">
+                        <a class="nav-link dropdown-toggle" href="#" id="productGuideDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Product Guide
                         </a>
 
@@ -33,8 +33,8 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" (mouseover)="onFadeDropDown('contactDropdown')" (mouseleave)="onFadeDropDown('contactDropdown')" id="contactDropdown" aria-haspopup="true" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item dropdown" (mouseover)="onFadeDropDown('contactDropdown')" (mouseleave)="onMouseLeaveNavbar('contactDropdown')">
+                        <a class="nav-link dropdown-toggle" id="contactDropdown" aria-haspopup="true" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Contattaci
                         </a>
 
@@ -44,8 +44,8 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" (mouseover)="onFadeDropDown('visitUsDropdown')" (mouseleave)="onFadeDropDown('visitUsDropdown')" id="visitUsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                    <li class="nav-item dropdown" (mouseover)="onFadeDropDown('visitUsDropdown')" (mouseleave)="onMouseLeaveNavbar('visitUsDropdown')">
+                        <a class="nav-link dropdown-toggle" id="visitUsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
                             Vienici a trovare
                         </a>
 

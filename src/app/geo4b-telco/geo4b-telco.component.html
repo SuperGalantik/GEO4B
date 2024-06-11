@@ -1,5 +1,5 @@
 <div class="flex-shrink-0 p-3 product-sidebar-wrapper" style="width: 380px">
-    <a [routerLink]="['/geo4btelco']" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+    <a [routerLink]="['/geo4btelco', 'intro']" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
         <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
         <span class="fs-5 fw-semibold text-white">GEO4B TELCO</span>
     </a>
@@ -37,19 +37,19 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                     <!-- </span> -->
-                    <ul class="btn-toggle-nav list-unstyled w-normal pb-1 small">
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="layout_interfaccia_utente" class="link-dark rounded">3.1 LAYOUT DELL'INTERFACCIA UTENTE</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="navigazione_mappa" class="link-dark rounded">3.2 NAVIGAZIONE DELLA MAPPA</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="selezione_oggetti" class="link-dark rounded">3.3 SELEZIONE OGGETTI SULLA MAPPA</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="selezione_livelli" class="link-dark rounded">3.4 SELEZIONE LIVELLI</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="layer_agg_servizio" class="link-dark rounded">3.5 LAYER AGGIUNTIVI DA SERVIZIO</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="layer_agg_file" class="link-dark rounded">3.6 LAYER AGGIUNTIVI DA FILE</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="viste" class="link-dark rounded">3.7 LE MIE VISTE</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="cartografia_di_sfondo" class="link-dark rounded">3.8 GESTIONE CARTOGRAFIA DI SFONDO</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="street_view" class="link-dark rounded">3.9 STREET VIEW</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="stampa" class="link-dark rounded">3.10 STAMPA</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="otdr" class="link-dark rounded">3.11 OTDR</a></li>
-                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="gestione_schiacciamenti" class="link-dark rounded">3.12 TOOL GESTIONE SCHIACCIAMENTI</a></li>
+                    <ul class="btn-toggle-nav list-unstyled w-normal pb-1 small" style="padding-top: 10px">
+                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="layout_interfaccia_utente">3.1 LAYOUT DELL'INTERFACCIA UTENTE</a></li>
+                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="navigazione_mappa">3.2 NAVIGAZIONE DELLA MAPPA</a></li>
+                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="selezione_oggetti">3.3 SELEZIONE OGGETTI SULLA MAPPA</a></li>
+                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="selezione_livelli">3.4 SELEZIONE LIVELLI</a></li>
+                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="layer_agg_servizio">3.5 LAYER AGGIUNTIVI DA SERVIZIO</a></li>
+                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="layer_agg_file">3.6 LAYER AGGIUNTIVI DA FILE</a></li>
+                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="viste">3.7 LE MIE VISTE</a></li>
+                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="cartografia_di_sfondo">3.8 GESTIONE CARTOGRAFIA DI SFONDO</a></li>
+                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="street_view">3.9 STREET VIEW</a></li>
+                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="stampa">3.10 STAMPA</a></li>
+                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="otdr">3.11 OTDR</a></li>
+                        <li class="paragraph-list-item"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="gestione_schiacciamenti">3.12 TOOL GESTIONE SCHIACCIAMENTI</a></li>
                     </ul>
                 </mat-expansion-panel>
             </li>
@@ -65,8 +65,8 @@
                         </mat-panel-title>
                     </mat-expansion-panel-header>
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'roadmap']" fragment="q2" class="link-dark rounded">4.1 GEO4B TELCO 1.1 (Q2-2024)</a></li>
-                        <li><a [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'roadmap']" fragment="q3" class="link-dark rounded">4.2 GEO4B TELCO 1.2 (Q3-2024)</a></li>
+                        <li class="paragraph-list-item"><a [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'roadmap']" fragment="q2" class="paragraph-list-item-link">4.1 GEO4B TELCO 1.1 (Q2-2024)</a></li>
+                        <li class="paragraph-list-item"><a [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'roadmap']" fragment="q3" class="paragraph-list-item-link">4.2 GEO4B TELCO 1.2 (Q3-2024)</a></li>
                     </ul>
                 </mat-expansion-panel>
             </li>

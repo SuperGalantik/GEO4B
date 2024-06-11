@@ -27,28 +27,31 @@
 
 .logo 
 {
-  width: auto;
-  padding: 0.5rem 1rem;
-  font-size: 1.5rem;
-  width: 150px;
+  width: 100px;
+  /* padding: 0.5rem 1rem; */
+  font-size: larger;
   font-weight: bold;
   color: #007bff;
-  background-color: #fff;
-  border-radius: 0.5rem;
+  /* background-color: #fff; */
+  border-radius: 15px;
   transition: transform 0.3s ease;
+  margin-right: 20px;
+  /* border: 1px solid black; */
 }
-
-@media screen and (max-width: 1050px)
+/* 
+@media screen and (min-width: 1050px)
 {
   .logo
   {
-    width: 100px;
+    width: 250px;
   }
 }
+ */
 
 .logo:hover 
 {
   transform: scale(1.1);
+
 }
 
 .menu-item 
@@ -81,7 +84,8 @@
   padding-top: 5rem;
 }
 
-body {
+body 
+{
   font-family: Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
@@ -90,7 +94,8 @@ body {
   color: #333;
 }
 
-.container {
+.container 
+{
   max-width: 800px;
   margin: 0 auto;
   padding: 1rem;
@@ -100,54 +105,51 @@ body {
   margin-bottom: 2rem;
 }
 
-img.img-fluid {
+/* img.img-fluid {
   max-width: 100%;
   height: auto;
   border-radius: 0.5rem;
-}
+} */
 
-.logo-link {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  height: 40px;
-  width: auto;
-}
-
-.dropdown-menu-end  {
+.dropdown-menu-end 
+{
   right: 0;
   left: auto;
 }
 
 /* Animazione di apertura */
-.dropdown-menu {
+.dropdown-menu 
+{
   display: none;
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.dropdown-menu.show {
+.dropdown-menu.show 
+{
   display: block;
   opacity: 1;
   transform: translateY(0);
 }
 
 /* Animazione di chiusura */
-@keyframes fadeOut {
-  from {
+@keyframes fadeOut 
+{
+  from 
+  {
       opacity: 1;
       transform: translateY(0);
   }
-  to {
+  to 
+  {
       opacity: 0;
       transform: translateY(-10px);
   }
 }
 
-.dropdown-menu.closing {
+.dropdown-menu.closing 
+{
   animation: fadeOut 0.3s ease forwards;
 }
 

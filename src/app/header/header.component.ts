@@ -48,23 +48,6 @@ export class HeaderComponent {
     }
   }
 
-  // Metodo per gestire la chiusura delle sottovoci quando ci si sposta col mouse in un punto qualsiasi della pagina
-  @HostListener('document:mousemove', ['$event'])
-  onMouseMove(event: MouseEvent) {
-    if (!this.isMouseInNavbar(event)) {
-      this.closeAllSubmenus();
-    }
-  }
-
-  // Metodo per controllare se il mouse è nella navbar
-  private isMouseInNavbar(event: MouseEvent): boolean {
-    const navbar = document.querySelector('.navbar');
-    if (navbar) {
-      return navbar.contains(event.target as Node);
-    }
-    return false;
-  }
-
   // Metodo per chiudere tutti i sottomenu aperti
   closeAllSubmenus() {
     const openSubmenus = document.querySelectorAll('.navbar .dropdown-menu.show');
@@ -97,26 +80,26 @@ export class HeaderComponent {
     }
 
     this.isAnimating = true;
-
-    if (dropdownToggle.classList.contains('show')) {
-      listContainer.classList.remove('show');
-      dropdownToggle.classList.remove('show');
-      dropdownToggle.setAttribute('aria-expanded', 'false');
-      this.isAnimating = false;
-    } else {
-      listContainer.classList.add('show');
-      dropdownToggle.classList.add('show');
-      dropdownToggle.setAttribute('aria-expanded', 'true');
-      this.isAnimating = false;
-    }
+    listContainer.classList.add('show');
+    dropdownToggle.classList.add('show');
+    dropdownToggle.setAttribute('aria-expanded', 'true');
+    this.isAnimating = false;
   }
 
-  // Metodo per gestire l'evento mouseleave sulla navbar
-  @HostListener('document:mouseleave', ['$event'])
-  onMouseLeaveNavbar(event: MouseEvent) {
-    if (!this.isMouseInNavbar(event)) {
-      this.closeAllSubmenus();
+  onMouseLeaveNavbar(elemRef: string): void
+  {
+    const listContainer = document.getElementById(`${elemRef}List`);
+    const dropdownToggle = document.getElementById(elemRef);
+
+    if (!listContainer || !dropdownToggle) {
+      return;
     }
+
+    listContainer.classList.remove('show');
+    dropdownToggle.classList.remove('show');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+    this.isAnimating = false;
+
   }
 }
 

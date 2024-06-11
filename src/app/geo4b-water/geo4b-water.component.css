@@ -1,0 +1,36 @@
+.collapse
+{
+    padding-left: 25px;
+}
+
+.expansion-no-elements:hover
+{
+    background-color: #A8C22E;
+}
+
+.product-sidebar-wrapper
+{
+    margin-top: 12vh;
+}
+
+.active
+{
+    background-color: #A8C22E !important;
+}
+
+mat-expansion-panel-header:hover
+{
+    background-color: #A8C22E !important;    
+}
+
+.paragraph-list-item
+{
+    padding: 5px;
+}
+
+.paragraph-list-item-link
+{
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+}
