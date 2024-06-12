@@ -13,26 +13,45 @@
     font-family: Sora;
 }
 
+@media screen and (min-width: 1400px) {
+    *
+    {
+        font-size: 0.9vw;
+        line-height: 1.5em;
+    }
+
+    h3
+    {
+        font-size: 1.6vw !important;
+    }
+}
+
+/* @media screen and (min-width: 2000px)
+{
+    *
+    {
+        font-size: 1.1vw;
+        line-height: 1.5em;
+    }
+
+    h3
+    {
+        font-size: 1.8vw !important;
+    }
+} */
+
+
 .row
 {
     margin: 0;
     padding: 0;
 }
 
-.col-12
-{
-    margin: 0px;
-    padding: 0px;
-}
-
 P
 {
     text-align: justify;
-    
-    font-size: 30px;
-    font-size: 3.5vw;
-    line-height: 1.5em;
 }
+
 
 *::selection 
 {
