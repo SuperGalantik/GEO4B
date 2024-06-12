@@ -44,9 +44,14 @@ export class Geo4bTelcoComponent implements OnInit
     this.onResize();
   }
 
-
   onNavigateTo(path: string)
   {
     this.router.navigate([path]);
   };
+
+  isRotated = false;
+
+  toggleRotation() {
+    this.isRotated = !this.isRotated;
+  }
 }
