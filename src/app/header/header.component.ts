@@ -6,13 +6,14 @@ import { MatFormField, MatLabel, MatSelect } from '@angular/material/select';
 import { MenuService } from '../menu-service';
 import { Router, RouterLink } from '@angular/router';
 import $ from 'jquery';
+import { NgClass, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  imports: [MatButtonModule, MatMenuModule, MatOption, MatSelect, MatLabel, MatFormField, RouterLink],
+  imports: [MatButtonModule, MatMenuModule, MatOption, MatSelect, MatLabel, MatFormField, RouterLink, NgIf, NgClass],
 
 })
 export class HeaderComponent {
@@ -99,7 +100,12 @@ export class HeaderComponent {
     dropdownToggle.classList.remove('show');
     dropdownToggle.setAttribute('aria-expanded', 'false');
     this.isAnimating = false;
+  }
 
+  isNavbarCollapsed = false;
+
+  toggleNavbar() {
+    this.isNavbarCollapsed = !this.isNavbarCollapsed;
   }
 }
 
