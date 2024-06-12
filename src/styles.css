@@ -1,50 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 
-
+/* import del font aziendale */
 @font-face 
 {
     font-family: Sora;
     src: url(../public/sora-regular.ttf);
 }
 
+/* gestione delle dimensioni del font e allineamento del testo */
 *
 {
     font-family: Sora;
 }
 
-@media screen and (min-width: 1400px) {
-    *
-    {
-        font-size: 0.9vw;
-        line-height: 1.5em;
-    }
-
-    h3
-    {
-        font-size: 1.6vw !important;
-    }
-}
-
-/* @media screen and (min-width: 2000px)
+@media screen and (width > 1440px) 
 {
     *
     {
-        font-size: 1.1vw;
+        font-size: 20px;
         line-height: 1.5em;
     }
 
-    h3
+    h3 
     {
-        font-size: 1.8vw !important;
+        font-size: 45px !important; 
     }
-} */
-
-
-.row
-{
-    margin: 0;
-    padding: 0;
 }
 
 P
@@ -52,23 +33,31 @@ P
     text-align: justify;
 }
 
-
+/* aggiustamento minor features */
 *::selection 
 {
     background-color: #A8C22E;
     color: black;
 }
 
-
 .container
 {
     margin-top: 7vh;
 }
 
+/* aggiunta di border radius e gestione aspect ratio per evitare pesantezza della pagina */
 img
 {
     aspect-ratio: 1280 / 720;
     border-radius: 15px;
 }
+
+/* fix di margin e padding indesiderati nella pagina */
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0;}
+
+.row
+{
+    margin: 0;
+    padding: 0;
+}

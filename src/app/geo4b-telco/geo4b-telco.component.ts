@@ -29,6 +29,7 @@ export class Geo4bTelcoComponent implements OnInit
 
   constructor(private router: Router) {};
   
+  /* listener per un eventuale ridimensionamento della finestra e per decisione della visualizzazione dell'offcanvas sidebar */
   @HostListener('window:resize', ['$event'])
   onResize() 
   {
@@ -39,11 +40,14 @@ export class Geo4bTelcoComponent implements OnInit
       this.displayOffcanvasTemplate = true
   }
 
+
+  /* controllo iniziale di un eventuale ridimensionamento */
   ngOnInit(): void 
   {
     this.onResize();
   }
 
+  /* metodo per controllo del click dei pulsanti */
   onNavigateTo(path: string)
   {
     this.router.navigate([path]);
@@ -51,6 +55,7 @@ export class Geo4bTelcoComponent implements OnInit
 
   isRotated = false;
 
+  /* controllo rotazione della freccia dell'eventuale offcanvas menù*/
   toggleRotation() {
     this.isRotated = !this.isRotated;
   }

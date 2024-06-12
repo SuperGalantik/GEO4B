@@ -1,20 +1,4 @@
-/* .navbar-wrapper
-{
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 12vh;
-  background-color: #2a2e43;
-  color: #fff;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-} */
-
+/* ------------------ stile generale navbar e navbar logo -------------------*/
 .navbar
 {
   background-color: #2a2e43;
@@ -38,7 +22,7 @@
 
 .logo 
 {
-  width: 100px;
+  width: 125px;
   font-size: larger;
   font-weight: bold;
   border-radius: 15px;
@@ -46,22 +30,13 @@
   margin-right: 20px;
 }
 
-/* 
-@media screen and (min-width: 1050px)
-{
-  .logo
-  {
-    width: 250px;
-  }
-}
-*/
-
 .logo:hover 
 {
   transform: scale(1.1);
+}  
+/* ------------------ fine ------------------- */
 
-}
-
+/* ----------------- stile per gli item dei menù dropdown -------------- */
 .menu-item 
 {
   color: #fff;
@@ -87,45 +62,13 @@
   display: flex;
 }
 
-.section 
-{
-  padding-top: 5rem;
-}
-
-body 
-{
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding-top: 6rem;
-  background-color: #f8f9fa;
-  color: #333;
-}
-
-.container 
-{
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1rem;
-  background-color: #fff;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-}
-
-/* img.img-fluid {
-  max-width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
-} */
-
+/* ------------------ stile dei menù dropdown -------------------*/
 .dropdown-menu-end 
 {
   right: 0;
   left: auto;
 }
 
-/* Animazione di apertura */
 .dropdown-menu 
 {
   display: none;
@@ -161,70 +104,134 @@ body
   animation: fadeOut 0.3s ease forwards;
 }
 
-.navbar-toggler 
+/* ------------------ fine -------------------*/
+
+/* ------------ animazione e stile per icona menu burger navbar ----------------*/
+
+@media screen and (width > 991px)
 {
-  border:none;
-  border: solid white 1px;
+  #navbar-toggler
+  {
+    display: none;
+  }
 }
 
-/* .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-.navbar-close-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 352 512'%3E%3Cpath fill='white' d='M242.7 256l100.1-100.1c12.3-12.3 12.3-32.2 0-44.5l-22.2-22.2c-12.3-12.3-32.2-12.3-44.5 0L176 189.3 75.9 89.2c-12.3-12.3-32.2-12.3-44.5 0L9.2 111.5c-12.3 12.3-12.3 32.2 0 44.5L109.3 256 9.2 356.1c-12.3 12.3-12.3 32.2 0 44.5l22.2 22.2c12.3 12.3 32.2 12.3 44.5 0L176 322.7l100.1 100.1c12.3 12.3 32.2 12.3 44.5 0l22.2-22.2c12.3-12.3 12.3-32.2 0-44.5L242.7 256z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 1.5em;
-  height: 1.5em;
-  display: inline-block;
-} */
-
-
-/* General styles for the bars */
-.navbar-toggler {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 24px;
-  background: transparent;
-  border: none;
+#navbar-toggler 
+{
+  width: 60px;
+  height: 45px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
   cursor: pointer;
-  padding: 0;
-  z-index: 10;
+}
+/* disegno e stile delle linee del menù burger */
+#navbar-toggler span {
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 50%;
+  background: white;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
 }
 
-.bar1, .bar2, .bar3 {
-  width: 30px;
-  height: 3px;
-  background-color: white;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Transformations for the 'X' state */
-.change-bar1 
+#navbar-toggler span:nth-child(even) 
 {
-  transform: rotate(43deg) translate(4px, 5px);
+  left: 50%;
+  border-radius: 0 9px 9px 0;
 }
 
-.change-bar2 {
+#navbar-toggler span:nth-child(odd) 
+{
+  left:0px;
+  border-radius: 9px 0 0 9px;
+}
+
+#navbar-toggler span:nth-child(1), #navbar-toggler span:nth-child(2) 
+{
+  top: 0px;
+}
+
+#navbar-toggler span:nth-child(3), #navbar-toggler span:nth-child(4) 
+{
+  top: 18px;
+}
+
+#navbar-toggler span:nth-child(5), #navbar-toggler span:nth-child(6) 
+{
+  top: 36px;
+}
+
+/* transizione di apertura e chiusura navbar */
+#navbar-toggler.open span:nth-child(1),#navbar-toggler.open span:nth-child(6) 
+{
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#navbar-toggler.open span:nth-child(2),#navbar-toggler.open span:nth-child(5) 
+{
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#navbar-toggler.open span:nth-child(1) 
+{
+  left: 5px;
+  top: 7px;
+}
+
+#navbar-toggler.open span:nth-child(2) 
+{
+  left: calc(50% - 5px);
+  top: 7px;
+}
+
+#navbar-toggler.open span:nth-child(3) 
+{
+  left: -50%;
   opacity: 0;
-  display: none;
 }
 
-.change-bar3 
+#navbar-toggler.open span:nth-child(4) 
 {
-  transform: rotate(-44deg) translate(4px, -3px);
+  left: 100%;
+  opacity: 0;
 }
 
-/* Optional: Ensure the button does not interfere with the dropdown menus */
-.navbar-toggler:focus {
-  outline: none;
+#navbar-toggler.open span:nth-child(5) 
+{
+  left: 5px;
+  top: 29px;
 }
 
+#navbar-toggler.open span:nth-child(6) 
+{
+  left: calc(50% - 5px);
+  top: 29px;
+}
+/* ------------ fine ----------------*/
 
-@media (max-width: 992px) 
+/* ------------ stile per il collapse della navbar ----------------*/
+@media (width<= 991px) 
 {
   .navbar-collapse 
   {
@@ -236,3 +243,12 @@ body
     color: white;
   }
 }
+
+@media screen and (width >= 992px) 
+{
+  .navbar-toggler
+  {
+    display: none;
+  }    
+}
+/* ------------ fine ----------------*/

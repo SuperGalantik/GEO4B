@@ -1,28 +1,40 @@
+/* gestione dei menù collapsible */
 .collapse
 {
     padding-left: 25px;
 }
 
+/* stile per gli expansion panel senza elementi da visualizzare*/
 .expansion-no-elements:hover
 {
     background-color: #A8C22E;
 }
 
+/* margine per il distaccamento del container principale dalla navbar */
 .product-sidebar-wrapper
 {
     margin-top: 12vh;
 }
 
+/* classe attiva solo in caso di routerLinkActive = true */
 .active
 {
     background-color: #A8C22E !important;
 }
 
+/* illuminazione sull hover */
 mat-expansion-panel-header:hover
 {
     background-color: #A8C22E !important;    
 }
 
+.paragraph-list-item-link:hover
+{
+    background-color: #A8C22E;
+    border-radius: 5px;
+}
+
+/*stile per i frammenti dei paragrafi*/
 .paragraph-list-item
 {
     padding: 5px;
@@ -35,18 +47,7 @@ mat-expansion-panel-header:hover
     text-decoration: none;
 }
 
-.paragraph-list-item-link:hover
-{
-    background-color: #A8C22E;
-    border-radius: 5px;
-}
-
-/* mat-grid-list, mat-grid-tile 
-{
-    padding-bottom: 0 !important;
-    padding-top: 0 !important;
-} */
-
+/* stile per l'offcanvas e i suoi sottomenù */
 .offcanvas-body {
     padding: 1rem;
 }
@@ -71,6 +72,7 @@ mat-expansion-panel-header:hover
     margin-bottom: 1rem;
 }
 
+/* gestione del ridimensionamento dei container e dell'apparizione del menù off-canvas con eventuale schermo ridotto */
 @media screen and (min-width: 1001px)
 {
   .off-canvas-toggler

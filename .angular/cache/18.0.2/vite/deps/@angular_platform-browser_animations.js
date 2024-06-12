@@ -1,8 +1,4 @@
 import {
-  BrowserModule,
-  DomRendererFactory2
-} from "./chunk-3JBJB2WG.js";
-import {
   AnimationDriver,
   AnimationEngine,
   AnimationRendererFactory,
@@ -10,11 +6,15 @@ import {
   NoopAnimationDriver,
   WebAnimationsDriver,
   WebAnimationsStyleNormalizer
-} from "./chunk-Y6DQSVIZ.js";
-import "./chunk-LZWCQW6X.js";
+} from "./chunk-DSRGFI35.js";
+import {
+  BrowserModule,
+  DomRendererFactory2
+} from "./chunk-AZKHMAJK.js";
+import "./chunk-455TCYYA.js";
 import {
   DOCUMENT
-} from "./chunk-CIUBZV5W.js";
+} from "./chunk-XEU7DX45.js";
 import {
   ANIMATION_MODULE_TYPE,
   Inject,
@@ -28,8 +28,9 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-5K2TKP3A.js";
-import "./chunk-SXIXOCJ4.js";
+} from "./chunk-3SPHMYMM.js";
+import "./chunk-WSA2QMXP.js";
+import "./chunk-WKYGNSYM.js";
 
 // node_modules/@angular/platform-browser/fesm2022/animations.mjs
 var _InjectableAnimationEngine = class _InjectableAnimationEngine extends AnimationEngine {

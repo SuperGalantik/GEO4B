@@ -16,13 +16,12 @@ import { NgClass, NgIf } from '@angular/common';
   imports: [MatButtonModule, MatMenuModule, MatOption, MatSelect, MatLabel, MatFormField, RouterLink, NgIf, NgClass],
 
 })
-export class HeaderComponent {
+export class HeaderComponent 
+{
   menuOpen = false;
   isAnimating = false;
   selected!: boolean;
   chiamaci!: any;
-
-  @ViewChild('visitUsDropdown') target!: ElementRef;
 
   // Aggiungiamo una variabile booleana per tracciare lo stato di apertura delle sottovoci
   submenuOpen = false;
@@ -31,22 +30,10 @@ export class HeaderComponent {
 
   constructor(private menuService: MenuService, private router: Router, public element: ElementRef) {}
 
-  toggleMenu() {
+  //metodo per l'apertura o la chiusura di un menù burger
+  toggleMenu() 
+  {
     this.menuOpen = !this.menuOpen;
-  }
-
-  setSelectedMenu(product: any) {
-    this.menuService.setSelectedMenu(product);
-    console.log('/' + this.menuService.selectedMenu);
-    this.router.navigate(['/' + this.menuService.selectedMenu]);
-    // Chiama onMenuChange() quando si cambia la voce del menu
-    this.onMenuChange();
-  }
-
-  onMenuChange() {
-    if (!this.submenuOpen) {
-      this.closeAllSubmenus();
-    }
   }
 
   // Metodo per chiudere tutti i sottomenu aperti
@@ -87,6 +74,7 @@ export class HeaderComponent {
     this.isAnimating = false;
   }
 
+  //metodo per gestire l'uscita del cursore dalla navbar
   onMouseLeaveNavbar(elemRef: string): void
   {
     const listContainer = document.getElementById(`${elemRef}List`);
@@ -102,10 +90,7 @@ export class HeaderComponent {
     this.isAnimating = false;
   }
 
-  isNavbarCollapsed = false;
-
-  toggleNavbar() {
-    this.isNavbarCollapsed = !this.isNavbarCollapsed;
-  }
+  //metodo per gestione apertura o chiusura menù burger (schermo piccolo)
+  toggleNavbar() { $('#navbar-toggler').toggleClass('open'); }
 }
 

@@ -22,20 +22,4 @@ export class SidebarComponent
   public innerWidth!: number;
 
   constructor(public menuService: MenuService, public router: Router, public activatedRoute: ActivatedRoute) {};
-
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): MaybeAsync<GuardResult> 
-  {
-    console.log(route.url);
-    return true;
-  }
-
-/*   @HostListener('window:resize', ['$event'])
-  onResize() 
-  {
-    this.innerWidth = window.innerWidth;
-    if(this.innerWidth>1000)
-      this.displayOffcanvasTemplate = false;
-    else
-      this.displayOffcanvasTemplate = true
-  } */
 }

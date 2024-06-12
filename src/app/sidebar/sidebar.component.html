@@ -1,5 +1,6 @@
 <div class="product-wrapper" style="margin-bottom: 50px;">
   <div class="sidebar" id="sidebar" style="margin: 0; padding: 0; padding-bottom: 50px;">
+    <!-- mostra la sidebar normale o l'offcanvas sidebar del prodotto selezionato -->
     @if(menuService.selectedMenu == 'geo4bwater')
     {
       <app-geo4b-water></app-geo4b-water>
@@ -10,6 +11,7 @@
     }
   </div>
   
+  <!-- mostra la user-guide del prodotto selezionato -->
   <div class="content">
     <router-outlet/>
   </div>

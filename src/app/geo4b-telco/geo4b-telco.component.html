@@ -1,3 +1,6 @@
+<!-- TUTTI I COMPONENTI AL DI SOTTO DELLA CARTELLA CORRENTE SONO I VARI PARAGRAFI DELLA USERGUIDE. CONTENGONO HTML CON DEL TESTO E POCHE RIGHE DI STILE PER LA GESTIONE DEI CONTAINER -->
+
+<!-- Non offcanvas sidebar -->
 <div *ngIf="!displayOffcanvasTemplate" class="flex-shrink-0 p-3 product-sidebar-wrapper" style="width: 25vw; margin-top: 150px">
     <a [routerLink]="['/geo4btelco', 'intro']" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
         <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
@@ -5,6 +8,8 @@
     </a>
     <ul class="list-unstyled ps-0">
         <mat-accordion multi="false">
+
+            <!-- btn per introduzione -->
             <li class="mb-1">
                 <mat-expansion-panel [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'intro']" class="expansion-no-elements" hideToggle disabled>
                     <mat-expansion-panel-header>
@@ -15,6 +20,7 @@
                 </mat-expansion-panel>
             </li>
             
+            <!-- btn per architettura -->
             <li class="mb-1">                
                 <mat-expansion-panel [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'architettura']" class="expansion-no-elements" hideToggle disabled>
                     <mat-expansion-panel-header>
@@ -25,6 +31,7 @@
                 </mat-expansion-panel>
             </li>
 
+            <!-- btn per funzionalità -->
             <li class="mb-1">
                 <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                     <mat-expansion-panel-header [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']">
@@ -49,6 +56,7 @@
                 </mat-expansion-panel>
             </li>
             
+            <!-- btn per roadmap -->
             <li class="mb-1">
                 <mat-expansion-panel (opened)="roadmapOpenState = true" (closed)="roadmapOpenState = false">
                     <mat-expansion-panel-header [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'roadmap']">
@@ -66,87 +74,87 @@
     </ul>
 </div>
 
-<button *ngIf="displayOffcanvasTemplate" 
-        class="btn off-canvas-toggler" 
-        id="offcanvas_toggler" 
-        type="button" 
-        data-bs-toggle="offcanvas" 
-        data-bs-target="#offcanvasSidebar" 
-        aria-controls="offcanvasSidebar"
-        (click)="toggleRotation()">
-    <img src="arrow-right.svg" 
-         id="offcanvas_img_toggler" 
-         class="offcanvas_img_toggler" 
-         [class.rotated]="isRotated" 
-         alt="circle_half">
+<!-- offcanvas sidebar button toggler -->
+<button *ngIf="displayOffcanvasTemplate" class="btn off-canvas-toggler" id="offcanvas_toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar" (click)="toggleRotation()">
+    <img src="arrow-right.svg" id="offcanvas_img_toggler" class="offcanvas_img_toggler" [class.rotated]="isRotated" alt="circle_half">
 </button>
 
+<!--offcanvas sidebar-->
 <div *ngIf="displayOffcanvasTemplate" class="offcanvas offcanvas-start sidebar" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
+    <!--offcanvas header div-->
     <div class="offcanvas-header" style="margin-top: 14vh;">
-    <h5 class="offcanvas-title" id="offcanvasSidebarLabel">GEO4B TELCO</h5>
-
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <h5 class="offcanvas-title" id="offcanvasSidebarLabel">GEO4B TELCO</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
+
+    <!--offcanvas body container-->
     <div class="offcanvas-body">
-    <ul class="list-unstyled ps-0">
-        <mat-accordion multi="false">
-        <li class="mb-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar" (click)="toggleRotation()">
-            <mat-expansion-panel [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'intro']" class="expansion-no-elements" hideToggle disabled>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                <span style="color: black;">1. INTRODUZIONE</span>
-                </mat-panel-title>
-            </mat-expansion-panel-header>
-            </mat-expansion-panel>
-        </li>
+        <ul class="list-unstyled ps-0">
+            <!--Tutti i bottoni anche quelli non espandibili sono realizzati con mat-expansion-panel in questo caso-->
 
-        <li class="mb-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar" (click)="toggleRotation()">
-            <mat-expansion-panel [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'architettura']" class="expansion-no-elements" hideToggle disabled>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                <span style="color: black;">2. ARCHITETTURA</span>
-                </mat-panel-title>
-            </mat-expansion-panel-header>
-            </mat-expansion-panel>
-        </li>
+            <mat-accordion multi="false">
+                <!--bottone per introduzione-->
+                <li class="mb-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar" (click)="toggleRotation()">
+                    <mat-expansion-panel [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'intro']" class="expansion-no-elements" hideToggle disabled>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                        <span style="color: black;">1. INTRODUZIONE</span>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    </mat-expansion-panel>
+                </li>
 
-        <li class="mb-1">
-            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-            <mat-expansion-panel-header [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']">
-                <mat-panel-title>
-                <span>3. FUNZIONALITÁ</span>
-                </mat-panel-title>
-            </mat-expansion-panel-header>
-            <ul class="btn-toggle-nav list-unstyled w-normal pb-1 small" style="padding-top: 10px">
-                <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="layout_interfaccia_utente">3.1 LAYOUT DELL'INTERFACCIA UTENTE</a></li>
-                <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="navigazione_mappa">3.2 NAVIGAZIONE DELLA MAPPA</a></li>
-                <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="selezione_oggetti">3.3 SELEZIONE OGGETTI SULLA MAPPA</a></li>
-                <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="selezione_livelli">3.4 SELEZIONE LIVELLI</a></li>
-                <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="layer_agg_servizio">3.5 LAYER AGGIUNTIVI DA SERVIZIO</a></li>
-                <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="layer_agg_file">3.6 LAYER AGGIUNTIVI DA FILE</a></li>
-                <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="viste">3.7 LE MIE VISTE</a></li>
-                <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="cartografia_di_sfondo">3.8 GESTIONE CARTOGRAFIA DI SFONDO</a></li>
-                <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="street_view">3.9 STREET VIEW</a></li>
-                <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="stampa">3.10 STAMPA</a></li>
-                <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="otdr">3.11 OTDR</a></li>
-                <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="gestione_schiacciamenti">3.12 TOOL GESTIONE SCHIACCIAMENTI</a></li>
-            </ul>
-            </mat-expansion-panel>
-        </li>
-        <li class="sidebar-item">
-            <mat-expansion-panel (opened)="roadmapOpenState = true" (closed)="roadmapOpenState = false">
-            <mat-expansion-panel-header [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'roadmap']">
-                <mat-panel-title>
-                4. ROADMAP DI PRODOTTO
-                </mat-panel-title>
-            </mat-expansion-panel-header>
-            <ul class="submenu">
-                <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'roadmap']" fragment="q2">4.1 GEO4B TELCO 1.1 (Q2-2024)</a></li>
-                <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'roadmap']" fragment="q3">4.2 GEO4B TELCO 1.2 (Q3-2024)</a></li>
-            </ul>
-            </mat-expansion-panel>
-        </li>
-        </mat-accordion>
-    </ul>
+                <!--bottone per architettura-->
+                <li class="mb-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar" (click)="toggleRotation()">
+                    <mat-expansion-panel [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'architettura']" class="expansion-no-elements" hideToggle disabled>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                        <span style="color: black;">2. ARCHITETTURA</span>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    </mat-expansion-panel>
+                </li>
+
+                <!--bottone per funzionalità con tutte le sottosezioni (sottoparagrafi) e relativi link al frammento corrispondente-->
+                <li class="mb-1">
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']">
+                        <mat-panel-title>
+                        <span>3. FUNZIONALITÁ</span>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <ul class="btn-toggle-nav list-unstyled w-normal pb-1 small" style="padding-top: 10px">
+                        <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="layout_interfaccia_utente">3.1 LAYOUT DELL'INTERFACCIA UTENTE</a></li>
+                        <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="navigazione_mappa">3.2 NAVIGAZIONE DELLA MAPPA</a></li>
+                        <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="selezione_oggetti">3.3 SELEZIONE OGGETTI SULLA MAPPA</a></li>
+                        <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="selezione_livelli">3.4 SELEZIONE LIVELLI</a></li>
+                        <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="layer_agg_servizio">3.5 LAYER AGGIUNTIVI DA SERVIZIO</a></li>
+                        <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="layer_agg_file">3.6 LAYER AGGIUNTIVI DA FILE</a></li>
+                        <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="viste">3.7 LE MIE VISTE</a></li>
+                        <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="cartografia_di_sfondo">3.8 GESTIONE CARTOGRAFIA DI SFONDO</a></li>
+                        <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="street_view">3.9 STREET VIEW</a></li>
+                        <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="stampa">3.10 STAMPA</a></li>
+                        <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="otdr">3.11 OTDR</a></li>
+                        <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'funzioni']" fragment="gestione_schiacciamenti">3.12 TOOL GESTIONE SCHIACCIAMENTI</a></li>
+                    </ul>
+                    </mat-expansion-panel>
+                </li>
+
+                <!--bottone per roadmap con tutte le sottosezioni (sottoparagrafi) e relativi link al frammento corrispondente-->
+                <li class="sidebar-item">
+                    <mat-expansion-panel (opened)="roadmapOpenState = true" (closed)="roadmapOpenState = false">
+                    <mat-expansion-panel-header [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'roadmap']">
+                        <mat-panel-title>
+                        4. ROADMAP DI PRODOTTO
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <ul class="submenu">
+                        <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'roadmap']" fragment="q2">4.1 GEO4B TELCO 1.1 (Q2-2024)</a></li>
+                        <li class="paragraph-list-item" (click)="toggleRotation()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"><a class="paragraph-list-item-link" [routerLinkActiveOptions]="linkActiveOption" [routerLinkActive]="['active']" [routerLink]="['/geo4btelco', 'roadmap']" fragment="q3">4.2 GEO4B TELCO 1.2 (Q3-2024)</a></li>
+                    </ul>
+                    </mat-expansion-panel>
+                </li>
+            </mat-accordion>
+        </ul>
     </div>
 </div>

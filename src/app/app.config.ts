@@ -19,6 +19,6 @@ export const appConfig: ApplicationConfig = {
         disableImageSizeWarning: true, 
         disableImageLazyLoadWarning: true
       }
-    }, provideAnimationsAsync()
+    }, provideAnimationsAsync(), provideAnimationsAsync()
   ]
 };

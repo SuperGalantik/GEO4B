@@ -32,6 +32,7 @@ export class AppComponent implements OnInit, OnDestroy
   } 
   */
  
+  //metodo per la gestione dello scrolling nel content e per la selezione dei fragment
   ngOnInit(): void 
   {
     this.subscription = this.router.events.pipe

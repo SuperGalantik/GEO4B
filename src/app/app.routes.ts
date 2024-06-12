@@ -23,6 +23,7 @@ export const routes: Routes =
         ]
     },
 
+    // route per la user guide di geo4b telco
     {
         path: 'geo4btelco', component: SidebarComponent, canActivate: [AuthGuardService], children: 
         [
@@ -33,11 +34,37 @@ export const routes: Routes =
         ]
     },
 
-    { path: 'geo4b', component: HomeComponent },
+    // route per l'home component (selezione di una delle 2 guide)
+    { path: 'geo4b', component: HomeComponent, /* children: 
+        [
+            {
+                path: 'water', component: SidebarComponent, canActivate: [AuthGuardService], children: 
+                [
+                    {path: 'intro',         component: WaterIntroduzioneComponent},
+                    {path: 'architettura',  component: WaterArchitetturaComponent},
+                    {path: 'funzioni',      component: WaterFunzioniComponent},
+                    {path: 'roadmap',       component: WaterRoadMapComponent},
+                ]
+            },
+        
+            // route per la user guide di geo4b telco
+            {
+                path: 'telco', component: SidebarComponent, canActivate: [AuthGuardService], children: 
+                [
+                    {path: 'intro',         component: TelcoIntroduzioneComponent},
+                    {path: 'architettura',  component: TelcoArchitetturaComponent},
+                    {path: 'funzioni',      component: TelcoFunzioniComponent},
+                    {path: 'roadmap',       component: TelcoRoadMapComponent},
+                ]
+            }
+        ] */
+    },
 
+    // route per evitare la generazione del div content vuoto
     { path: 'geo4bwater', redirectTo: '/geo4bwater/intro', pathMatch: 'full' },
 
     { path: 'geo4btelco', redirectTo: '/geo4btelco/intro', pathMatch: 'full' },
 
+    // route per gestione link non validi
     { path: '**', redirectTo: '/geo4b' },
 ];
