@@ -47,4 +47,10 @@ export class Geo4bWaterComponent implements OnInit
   {
     this.router.navigate([path]);
   };
+
+  isRotated = false;
+
+  toggleRotation() {
+    this.isRotated = !this.isRotated;
+  }
 }

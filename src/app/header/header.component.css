@@ -18,8 +18,8 @@
 .navbar
 {
   background-color: #2a2e43;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   box-shadow: 0 2px 4px rgba(240, 240, 240, 0.24);
   
   padding-left: 15px;
@@ -163,13 +163,66 @@ body
 
 .navbar-toggler 
 {
+  border:none;
   border: solid white 1px;
 }
 
-.navbar-toggler-icon 
-{
+/* .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
+
+.navbar-close-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 352 512'%3E%3Cpath fill='white' d='M242.7 256l100.1-100.1c12.3-12.3 12.3-32.2 0-44.5l-22.2-22.2c-12.3-12.3-32.2-12.3-44.5 0L176 189.3 75.9 89.2c-12.3-12.3-32.2-12.3-44.5 0L9.2 111.5c-12.3 12.3-12.3 32.2 0 44.5L109.3 256 9.2 356.1c-12.3 12.3-12.3 32.2 0 44.5l22.2 22.2c12.3 12.3 32.2 12.3 44.5 0L176 322.7l100.1 100.1c12.3 12.3 32.2 12.3 44.5 0l22.2-22.2c12.3-12.3 12.3-32.2 0-44.5L242.7 256z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+} */
+
+
+/* General styles for the bars */
+.navbar-toggler {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Transformations for the 'X' state */
+.change-bar1 
+{
+  transform: rotate(43deg) translate(4px, 5px);
+}
+
+.change-bar2 {
+  opacity: 0;
+  display: none;
+}
+
+.change-bar3 
+{
+  transform: rotate(-44deg) translate(4px, -3px);
+}
+
+/* Optional: Ensure the button does not interfere with the dropdown menus */
+.navbar-toggler:focus {
+  outline: none;
+}
+
 
 @media (max-width: 992px) 
 {
