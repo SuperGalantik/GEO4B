@@ -29,7 +29,7 @@ export class SidebarComponent
     return true;
   }
 
-  @HostListener('window:resize', ['$event'])
+/*   @HostListener('window:resize', ['$event'])
   onResize() 
   {
     this.innerWidth = window.innerWidth;
@@ -37,5 +37,5 @@ export class SidebarComponent
       this.displayOffcanvasTemplate = false;
     else
       this.displayOffcanvasTemplate = true
-  }
+  } */
 }

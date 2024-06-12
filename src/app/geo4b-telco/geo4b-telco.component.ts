@@ -11,7 +11,7 @@ import { Router, RouterLink, RouterLinkActive, IsActiveMatchOptions } from '@ang
   templateUrl: './geo4b-telco.component.html',
   styleUrl: './geo4b-telco.component.css'
 })
-export class Geo4bTelcoComponent
+export class Geo4bTelcoComponent implements OnInit
 {
   public panelOpenState: boolean = false;
   public roadmapOpenState: boolean = false;
@@ -38,6 +38,12 @@ export class Geo4bTelcoComponent
     else
       this.displayOffcanvasTemplate = true
   }
+
+  ngOnInit(): void 
+  {
+    this.onResize();
+  }
+
 
   onNavigateTo(path: string)
   {

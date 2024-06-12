@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { IsActiveMatchOptions, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { MatAccordion, MatExpansionModule, MatExpansionPanel } from '@angular/material/expansion';
 import { NgIf } from '@angular/common';
@@ -11,7 +11,7 @@ imports: [RouterLink, MatExpansionModule, RouterLinkActive, NgIf],
 templateUrl: './geo4b-water.component.html',
 styleUrl: './geo4b-water.component.css'
 })
-export class Geo4bWaterComponent 
+export class Geo4bWaterComponent implements OnInit
 {
   public displayOffcanvasTemplate: boolean = false;
   public innerWidth!: number;
@@ -38,6 +38,10 @@ export class Geo4bWaterComponent
       this.displayOffcanvasTemplate = true
   }
 
+  ngOnInit(): void 
+  {
+    this.onResize();
+  }
 
   onNavigateTo(path: string)
   {
