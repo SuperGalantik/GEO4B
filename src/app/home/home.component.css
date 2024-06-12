@@ -15,18 +15,28 @@
 .product-img:hover
 {
     transform: scale(1.1);
-
 }
+
 @media screen and (max-width: 768px) {
-    .product-button-wrapper{
-        width: 80%;
+    .product-button-wrapper
+    {
+        width: 500px;
+        height: 500px;
     }
+
     .home_wrapper{
         flex-wrap: wrap;
     }
 }
 @media screen and (max-width: 500px) {
-    .product-img{
+    .product-img
+    {
         height: auto
     }    
+}
+
+.btn
+{
+    width: 475px;
+    height: 475px;
 }

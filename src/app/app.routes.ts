@@ -35,5 +35,9 @@ export const routes: Routes =
 
     { path: 'geo4b', component: HomeComponent },
 
+    { path: 'geo4bwater', redirectTo: '/geo4bwater/intro', pathMatch: 'full' },
+
+    { path: 'geo4btelco', redirectTo: '/geo4btelco/intro', pathMatch: 'full' },
+
     { path: '**', redirectTo: '/geo4b' },
 ];

@@ -11,7 +11,6 @@
 *
 {
     font-family: Sora;
-    font-size: 0.9rem;
 }
 
 .row
@@ -29,6 +28,10 @@
 P
 {
     text-align: justify;
+    
+    font-size: 30px;
+    font-size: 3.5vw;
+    line-height: 1.5em;
 }
 
 *::selection 
