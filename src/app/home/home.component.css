@@ -4,6 +4,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     height: 100%;
+    margin-top: 150px;
 }
 
 .product-img
@@ -24,8 +25,7 @@
     {
         width: 300px;
         height: 300px;
-    }    
-
+    }
 }
 
 @media screen and (min-width: 500px) and (max-width: 768px) 
