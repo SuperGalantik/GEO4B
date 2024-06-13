@@ -1,6 +1,6 @@
 import {
   __commonJS
-} from "./chunk-WKYGNSYM.js";
+} from "./chunk-ASLTLD6L.js";
 
 // node_modules/jquery/dist/jquery.js
 var require_jquery = __commonJS({

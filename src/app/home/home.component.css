@@ -1,4 +1,9 @@
 /*stile per il contenitore dei bottoni*/
+h2
+{
+    font-size: 37px !important;
+}
+
 .home_wrapper
 {
     display: flex;
@@ -28,7 +33,11 @@
     font-weight: 900;
     font-size: larger;
     text-align: center;
-    padding-bottom: 15px;
+}
+
+.product-button-wrapper
+{
+    margin-top: 50px;
 }
 
 /*ridimensionamento delle immagini e dei contenitori per schermi di dimensioni ridotte*/

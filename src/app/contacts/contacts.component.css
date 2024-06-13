@@ -1,0 +1,150 @@
+/* Rimuovi i margini e padding dalla riga */
+.row {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Stile per il contenitore della mappa */
+.map-container {
+    border-radius: 15px;
+    margin-top: 5%;
+    width: 45vw;
+    height: 85vh;
+    margin-bottom: 5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi un'ombra leggera */
+    overflow: hidden; /* Assicurati che la mappa non esca dal contenitore */
+}
+
+/* Stile per la mappa */
+.map {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Stile per il titolo */
+.title {
+    border-radius: 15px;
+    background-color: #709cae;
+    height: 200px;
+    width: 100vw;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stile per l'intestazione h1 */
+.title h1 {
+    font-size: 50px !important;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+/* Stile per il breadcrumb */
+.title span {
+    font-size: 32px;
+}
+
+/* Sezione contatti */
+.contact-section {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    color: #709cae;
+    margin-bottom: 20px;
+}
+
+/* Stile per il riquadro dei contatti */
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #709cae; /* Colore uguale alla barra del menu */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    margin: 0 auto;
+    color: white; /* Colore del testo bianco per contrasto */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.contact-item i {
+    margin-right: 10px;
+    color: white; /* Colore delle icone bianco per contrasto */
+    font-size: 24px; /* Aumenta la dimensione delle icone */
+}
+
+.contact-item a {
+    color: white; /* Colore dei link bianco per contrasto */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #f0f0f0; /* Cambia leggermente il colore al passaggio del mouse */
+}
+
+/* Aggiungi media query per migliorare la responsività */
+@media (max-width: 768px) {
+    .map-container {
+        width: 90vw;
+        height: 50vh;
+        margin-bottom: 10%;
+    }
+
+    .title h1 {
+        font-size: 36px !important;
+    }
+
+    .title span {
+        font-size: 24px;
+    }
+
+    .contact-section h2 {
+        font-size: 28px;
+    }
+
+    .contact-box {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-container {
+        width: 100vw;
+        height: 50vh;
+        margin-bottom: 15%;
+    }
+
+    .title h1 {
+        font-size: 28px !important;
+    }
+
+    .title span {
+        font-size: 18px;
+    }
+
+    .contact-section h2 {
+        font-size: 24px;
+    }
+
+    .contact-box {
+        width: 90%;
+    }
+}

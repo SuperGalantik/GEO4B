@@ -10,7 +10,7 @@ import { TelcoFunzioniComponent } from './geo4b-telco/telco-funzioni/telco-funzi
 import { AuthGuardService } from './auth-guard.service';
 import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { ProductComponent } from './product/product.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 export const routes: Routes = 
 [
@@ -38,6 +38,7 @@ export const routes: Routes =
     // route per l'home component (selezione di una delle 2 guide)
     { path: 'home', component: HomeComponent },
 
+    /*  
     { path: 'geo4b', component: ProductComponent, children: 
         [
             {
@@ -61,7 +62,10 @@ export const routes: Routes =
                 ]
             }
         ]
-    },
+    }, 
+    */
+
+    { path: 'contattaci', component: ContactsComponent },
 
     // route per evitare la generazione del div content vuoto
     { path: 'geo4bwater', redirectTo: '/geo4bwater/intro', pathMatch: 'full' },
