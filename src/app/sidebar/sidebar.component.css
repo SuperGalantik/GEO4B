@@ -9,7 +9,6 @@
 {
     margin-top: 8vh;
 }
-/* fine */
 
 /* ---------------- ridimensionamento dei container ------------------- */
 .content
@@ -43,9 +42,7 @@
     }
 }
 
-/* --------------- fine ----------------*/
-
-/* ---------------------- ridimensionamento container e sidebar per schermi di dimensione ridotta --------------------*/
+/* ridimensionamento container e sidebar per schermi di dimensione ridotta */
 @media screen and (min-width: 1000px) 
 {
     .sidebar

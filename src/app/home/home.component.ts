@@ -12,7 +12,7 @@ import { IsActiveMatchOptions, Router, RouterLink, RouterLinkActive, RouterOutle
 export class HomeComponent 
 {
   constructor(public menuService: MenuService, public router: Router) {};
-
+  
   public linkActiveOption: IsActiveMatchOptions = 
   {
     matrixParams: 'ignored',
@@ -21,6 +21,7 @@ export class HomeComponent
     fragment: 'exact'
   }
 
+  /* metodo per la navigazione a route specifiche alla pressione dei bottoni */
   onNavigateTo(product: string)
   {
     if(product == 'telco')

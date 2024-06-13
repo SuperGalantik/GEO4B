@@ -1,3 +1,4 @@
+/*stile per il contenitore dei bottoni*/
 .home_wrapper
 {
     display: flex;
@@ -7,6 +8,7 @@
     margin-top: 150px;
 }
 
+/*stile per le immagini dei prodotti*/
 .product-img
 {
     border-radius: 20px;
@@ -17,9 +19,19 @@
 
 .product-img:hover
 {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
+.product-title
+{
+    color: white;
+    font-weight: 900;
+    font-size: larger;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+/*ridimensionamento delle immagini e dei contenitori per schermi di dimensioni ridotte*/
 @media screen and (max-width: 499px) {
     .product-img
     {
@@ -42,8 +54,8 @@
 {
     .product-img
     {
-        width: 600px;
-        height: 600px;
+        width: 575px;
+        height: 575px;
     }    
 }
 

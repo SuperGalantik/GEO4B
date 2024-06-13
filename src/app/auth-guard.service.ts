@@ -6,9 +6,11 @@ import { MenuService } from "./menu-service";
 export class AuthGuardService implements CanActivate
 {
     constructor(public menuService: MenuService) {};
+
     /* metodo per la gestione delle route  */
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): MaybeAsync<GuardResult>
     {
+        console.log(route.url[0].path);
         this.menuService.setSelectedMenu(route.url[0].path);
         return true;
     }

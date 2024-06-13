@@ -10,6 +10,7 @@ import { TelcoFunzioniComponent } from './geo4b-telco/telco-funzioni/telco-funzi
 import { AuthGuardService } from './auth-guard.service';
 import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { ProductComponent } from './product/product.component';
 
 export const routes: Routes = 
 [
@@ -35,32 +36,9 @@ export const routes: Routes =
     },
 
     // route per l'home component (selezione di una delle 2 guide)
-    { path: 'home', component: HomeComponent, /* children: 
-        [
-            {
-                path: 'water', component: SidebarComponent, canActivate: [AuthGuardService], children: 
-                [
-                    {path: 'intro',         component: WaterIntroduzioneComponent},
-                    {path: 'architettura',  component: WaterArchitetturaComponent},
-                    {path: 'funzioni',      component: WaterFunzioniComponent},
-                    {path: 'roadmap',       component: WaterRoadMapComponent},
-                ]
-            },
-        
-            // route per la user guide di geo4b telco
-            {
-                path: 'telco', component: SidebarComponent, canActivate: [AuthGuardService], children: 
-                [
-                    {path: 'intro',         component: TelcoIntroduzioneComponent},
-                    {path: 'architettura',  component: TelcoArchitetturaComponent},
-                    {path: 'funzioni',      component: TelcoFunzioniComponent},
-                    {path: 'roadmap',       component: TelcoRoadMapComponent},
-                ]
-            }
-        ] */
-    },
+    { path: 'home', component: HomeComponent },
 
-    { path: 'geo4b', children: 
+    { path: 'geo4b', component: ProductComponent, children: 
         [
             {
                 path: 'water', component: SidebarComponent, canActivate: [AuthGuardService], children: 
