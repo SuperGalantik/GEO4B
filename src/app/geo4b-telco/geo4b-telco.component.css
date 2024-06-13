@@ -81,58 +81,52 @@ mat-expansion-panel-header:hover
   }
 }
 
-@media screen and (max-width: 1000px) {
-    .off-canvas-toggler {
-      display: flex;
-      position: fixed;
-      bottom: 10%;
-      left: 10px;
-      z-index: 2000;
-      padding: 10px;
-      width: 60px;
-      height: 60px;
-      background-color: #6aabd2;
-      border-radius: 50%;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-    }
-  
-    .off-canvas-toggler:hover {
-      background-color: #4f8aa8;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-      transform: scale(1.1);
-    }
-  
-    .offcanvas_img_toggler {
-      padding: 0;
-      margin: 0;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-  
-    .offcanvas_img_toggler.rotated {
-      transform: rotate(180deg);
-    }
-  
-    .offcanvas_half-circle_toggler::before {
-      content: '➤';
-      font-size: 28px;
-      color: #6aabd2;
-      transition: color 0.3s;
-    }
-  
-    .offcanvas_half-circle_toggler:hover::before {
-      color: #4f8aa8;
-    }
+@media screen and (max-width: 1000px) 
+{
+  .off-canvas-toggler 
+  {
+    display: flex;
+    position: fixed;
+    bottom: 10%;
+    left: 10px;
+    z-index: 2000;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: #6aabd2;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
   }
+
+  .off-canvas-toggler:hover 
+  {
+    background-color: #4f8aa8;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+  }
+
+  .offcanvas_img_toggler 
+  {
+    padding: 0;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .offcanvas_img_toggler.rotated 
+  {
+    transform: rotate(180deg);
+  }
+}
   
     
