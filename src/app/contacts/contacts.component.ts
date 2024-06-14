@@ -18,29 +18,36 @@ export class ContactsComponent implements OnInit
   private bolognaMarker!: Leaflet.Marker;
   private romaMarker!: Leaflet.Marker;
 
-  ngOnInit(): void {
+  ngOnInit(): void 
+  {
     this.initMap();
   }
 
-  private initMap(): void {
-    this.map = Leaflet.map('map', {
+  private initMap(): void 
+  {
+    this.map = Leaflet.map('map', 
+    {
       center: this.center,
       zoom: 6
     });
 
-    Leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    Leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 
+    {
       minZoom: 2,
       maxZoom: 19,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(this.map);
 
     //sede di pesaro
-    const icon = Leaflet.icon({
-      iconUrl: 'marker.svg',
-      iconSize: [38, 38],
-      iconAnchor: [19, 38],
-      popupAnchor: [0, -38]
-    });
+    const icon = Leaflet.icon
+    (
+      {
+        iconUrl: 'marker.svg',
+        iconSize: [38, 38],
+        iconAnchor: [19, 38],
+        popupAnchor: [0, -38]
+      }
+    );
 
     this.bolognaMarker = Leaflet.marker([44.49415, 11.344162], {icon: icon});
     this.bolognaMarker.addTo(this.map).bindPopup('<a href="https://goo.gl/maps/S9YHh4Nu77sB7s257">Via degli Orefici, 2 (BO)</a>');

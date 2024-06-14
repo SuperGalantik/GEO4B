@@ -29,6 +29,7 @@ export class HeaderComponent
   isMouseInsideNavbar: any;
 
   constructor(private menuService: MenuService, private router: Router, public element: ElementRef) {}
+  
 
   //metodo per l'apertura o la chiusura di un menù burger
   toggleMenu() 
@@ -56,16 +57,15 @@ export class HeaderComponent
   }
 
   // Metodo per gestire l'apertura/chiusura del sottomenu
-  onFadeDropDown(elemRef: string) {
-    if (this.isAnimating) {
+  onFadeDropDown(elemRef: string) 
+  {
+    if (this.isAnimating)
       return;
-    }
 
     const listContainer = document.getElementById(`${elemRef}List`);
     const dropdownToggle = document.getElementById(elemRef);
-    if (!listContainer || !dropdownToggle) {
+    if (!listContainer || !dropdownToggle)
       return;
-    }
 
     this.isAnimating = true;
     listContainer.classList.add('show');
@@ -92,5 +92,23 @@ export class HeaderComponent
 
   //metodo per gestione apertura o chiusura menù burger (schermo piccolo)
   toggleNavbar() { $('#navbar-toggler').toggleClass('open'); }
+
+  openDropdown(ref: string): void
+  {
+    const listContainer = document.getElementById(`${ref}List`);
+    const dropdownToggle = document.getElementById(ref);
+
+    if (!listContainer || !dropdownToggle) {
+      return;
+    }
+
+    listContainer.classList.toggle('show');
+    dropdownToggle.classList.toggle('show');
+
+    if(dropdownToggle.getAttribute('aria-expanded')=='true')
+      dropdownToggle.setAttribute('aria-expanded', 'false');
+    else
+      dropdownToggle.setAttribute('aria-expanded', 'true');
+  }
 }
 

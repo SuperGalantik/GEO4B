@@ -14,11 +14,6 @@
   color: white;
 }
 
-.nav-link:hover
-{
-  color: #A8C22E;
-}
-
 .logo 
 {
   width: 125px;
@@ -103,7 +98,10 @@
   animation: fadeOut 0.3s ease forwards;
 }
 
-/* ------------------ fine -------------------*/
+.nav-link:hover
+{
+  color: #A8C22E;
+}
 
 /* ------------ animazione e stile per icona menu burger navbar ----------------*/
 
