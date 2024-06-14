@@ -33,7 +33,7 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item dropdown" (mouseover)="onFadeDropDown('productGuideDropdown')" (mouseleave)="onMouseLeaveNavbar('productGuideDropdown')">
+                    <li class="nav-item dropdown" (mouseover)="onFadeDropDown('productGuideDropdown')" (mouseleave)="onMouseLeaveNavbar('productGuideDropdown')" (click)="openDropdown('productGuideDropdown')">
                         <a class="nav-link dropdown-toggle" id="productGuideDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Product Guide
                         </a>
@@ -45,7 +45,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" id="contact" [routerLink]="['/contattaci']" aria-haspopup="true" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link" id="contact" [routerLink]="['/contattaci']" aria-haspopup="true" type="button" data-bs-toggle="dropdown" aria-expanded="false" (click)="openDropdown('contact')">
                             Contattaci
                         </a>
                     </li>

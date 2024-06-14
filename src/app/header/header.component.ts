@@ -95,20 +95,28 @@ export class HeaderComponent
 
   openDropdown(ref: string): void
   {
-    const listContainer = document.getElementById(`${ref}List`);
-    const dropdownToggle = document.getElementById(ref);
-
-    if (!listContainer || !dropdownToggle) {
+    if(ref=='contact')
+    {
+      this.router.navigate(['/contattaci']);  
       return;
     }
-
-    listContainer.classList.toggle('show');
-    dropdownToggle.classList.toggle('show');
-
-    if(dropdownToggle.getAttribute('aria-expanded')=='true')
-      dropdownToggle.setAttribute('aria-expanded', 'false');
     else
-      dropdownToggle.setAttribute('aria-expanded', 'true');
+    {
+      const listContainer = document.getElementById(`${ref}List`);
+      const dropdownToggle = document.getElementById(ref);
+
+      if (!listContainer || !dropdownToggle) {
+        return;
+      }
+
+      listContainer.classList.toggle('show');
+      dropdownToggle.classList.toggle('show');
+
+      if(dropdownToggle.getAttribute('aria-expanded')=='true')
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+      else
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+    } 
   }
 }
 
